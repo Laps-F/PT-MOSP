@@ -1,13 +1,12 @@
-//rodar pro primeiro conjunto a nova versao com 2 soluções mcnh e 3 aleatoria e mais ptl
-//pra tentar voltar a ter 7% de gap
-//3x seq peças e 3x seq padroes
-
 #include "MOSP.h"
 #include "MCNH/HNCM.h"
 
-MOSP::MOSP(std::string filename, int readForm, int neighborStrategy){
+using namespace std;
+
+MOSP::MOSP(std::string filename, int readForm, int neighborStrategy, int inSequenceForm){
     neighborStrt = neighborStrategy;
 	fn = filename;
+    sequenceForm = inSequenceForm;
     std::ifstream file(filename);
 	std::string line; 
 	
@@ -16,18 +15,15 @@ MOSP::MOSP(std::string filename, int readForm, int neighborStrategy){
         return;
     }	
 
-    if (filename.find("/Challenge/") != std::string::npos) {
-        std::string ignoredLine;
-        getline(file, ignoredLine);
-    }
-
     file >> numberPatterns >> numberPieces;
+    // file >> numberPieces >> numberPatterns;
+
 
     patternPieces.resize(numberPatterns);
     stackSizeEvaluation.resize(numberPieces, 0);
     maxNumberPiecesPerPatern = 0;
     constructSolutionTime = 0;
-    
+
     if(readForm){ //leitura arquivos do rafael
         for (int j = 0; j < numberPatterns; j++) {
             for (int i = 0; i < numberPieces; i++) {
@@ -59,18 +55,19 @@ MOSP::MOSP(std::string filename, int readForm, int neighborStrategy){
 
     patternBitsets.resize(numberPatterns);
 
-    // Pré-processa os padrões para bitsets
-    for (int i = 0; i < numberPatterns; i++) {
-        for (int p : patternPieces[i]) {
-            patternBitsets[i].set(p);
+    if(sequenceForm){
+        for (int i = 0; i < numberPatterns; i++) {
+            for (int p : patternPieces[i]) {
+                patternBitsets[i].set(p);
+            }
         }
-    }
 
-    patternsPorPeca.resize(numberPieces);
-    for (int pattern = 0; pattern < numberPatterns; ++pattern) {
-        for (int piece = 0; piece < numberPieces; ++piece) {
-            if (patternBitsets[pattern].test(piece)) {
-                patternsPorPeca[piece].push_back(pattern);
+        patternsPorPeca.resize(numberPieces);
+        for (int pattern = 0; pattern < numberPatterns; ++pattern) {
+            for (int piece = 0; piece < numberPieces; ++piece) {
+                if (patternBitsets[pattern].test(piece)) {
+                    patternsPorPeca[piece].push_back(pattern);
+                }
             }
         }
     }
@@ -94,11 +91,20 @@ solMOSP MOSP::construction() {
         char* filename = new char[fn.size() + 1];
         strcpy(filename, fn.c_str());
 
-        // mainMethod(&resultHNCM, &timeHNCM, filename, &solution, &solutionSize, 0); //padroes
-        mainMethod(&resultHNCM, &timeHNCM, filename, &solution, &solutionSize, 1); //peças
+        if(sequenceForm){
+            mainMethod(&resultHNCM, &timeHNCM, filename, &solution, &solutionSize, 1); //peças
+        } else {
+            mainMethod(&resultHNCM, &timeHNCM, filename, &solution, &solutionSize, 0); //padroes
+        }
+
+        // std::cout << "Debug: mainMethod retornou solutionSize = " << solutionSize << std::endl;
+        // for(int i = 0; i < solutionSize; i++) {
+        //     std::cout<<solution[i]<<", ";
+        // }std::cout<<"."<<std::endl;
+
         constructSolutionTime += timeHNCM;
 
-        for(int i = 0; i < numberPieces; i++) {
+        for(int i = 0; i < solutionSize; i++) {
             ss.sol.push_back(solution[i]);
         }
 
@@ -107,8 +113,14 @@ solMOSP MOSP::construction() {
         std::random_device rnd_device;
         std::mt19937 mersenne_engine {rnd_device()};
 
-        for (int i = 0; i < numberPieces; i++) {
-            ss.sol.push_back(i);
+        if(sequenceForm){
+            for (int i = 0; i < numberPieces; i++) {
+                ss.sol.push_back(i);
+            }
+        } else {
+            for (int i = 0; i < numberPatterns; i++) {
+                ss.sol.push_back(i);
+            }
         }
 
         std::shuffle(begin(ss.sol), end(ss.sol), mersenne_engine);
@@ -143,21 +155,41 @@ solMOSP MOSP::neighbor2Opt(solMOSP sol){
 
     std::random_device rnd_device;
     std::mt19937 mersenne_engine {rnd_device()};
-    std::uniform_int_distribution<int> distPattern(0, numberPatterns - 1);
-
-    int pattern1 = 0, pattern2 = 0;
+    if(sequenceForm){
+        std::uniform_int_distribution<int> distPattern(0, numberPieces - 1);
     
-    do {
-        pattern1 = distPattern(mersenne_engine);
-        pattern2 = distPattern(mersenne_engine);
-    } while (pattern1 == pattern2); 
+        int piece1 = 0, piece2 = 0;
+        
+        do {
+            piece1 = distPattern(mersenne_engine);
+            piece2 = distPattern(mersenne_engine);
+        } while (piece1 == piece2); 
+        
+        if(piece1 > piece2) std::swap(piece1, piece2);
     
-    if(pattern1 > pattern2) std::swap(pattern1, pattern2);
+        while(piece1 < piece2) {
+            std::swap(s.sol[piece1], s.sol[piece2]);
+            piece1++;
+            piece2--;
+        }
+    }else {
+        std::uniform_int_distribution<int> distPattern(0, numberPatterns - 1);
+    
+        int pattern1 = 0, pattern2 = 0;
+        
+        do {
+            pattern1 = distPattern(mersenne_engine);
+            pattern2 = distPattern(mersenne_engine);
+        } while (pattern1 == pattern2); 
+        
+        if(pattern1 > pattern2) std::swap(pattern1, pattern2);
+    
+        while(pattern1 < pattern2) {
+            std::swap(s.sol[pattern1], s.sol[pattern2]);
+            pattern1++;
+            pattern2--;
+        }
 
-    while(pattern1 < pattern2) {
-        std::swap(s.sol[pattern1], s.sol[pattern2]);
-        pattern1++;
-        pattern2--;
     }
 
     s.Nup = sol.Nup;
@@ -174,16 +206,30 @@ solMOSP MOSP::neighborSwap(solMOSP sol) {
 
     std::random_device rnd_device;
     std::mt19937 mersenne_engine {rnd_device()};
-    std::uniform_int_distribution<int> distPattern(0, numberPatterns - 1);
 
-    int pattern1 = 0, pattern2 = 0;
-
-    do {
-        pattern1 = distPattern(mersenne_engine);
-        pattern2 = distPattern(mersenne_engine);
-    } while (pattern1 == pattern2);
-
-    std::swap(s.sol[pattern1], s.sol[pattern2]);
+    if(sequenceForm){
+        std::uniform_int_distribution<int> distPattern(0, numberPieces - 1);
+    
+        int piece1 = 0, piece2 = 0;
+    
+        do {
+            piece1 = distPattern(mersenne_engine);
+            piece2 = distPattern(mersenne_engine);
+        } while (piece1 == piece2);
+    
+        std::swap(s.sol[piece1], s.sol[piece2]);
+    }else {
+        std::uniform_int_distribution<int> distPattern(0, numberPatterns - 1);
+    
+        int pattern1 = 0, pattern2 = 0;
+    
+        do {
+            pattern1 = distPattern(mersenne_engine);
+            pattern2 = distPattern(mersenne_engine);
+        } while (pattern1 == pattern2);
+    
+        std::swap(s.sol[pattern1], s.sol[pattern2]);
+    }
 
     s.Nup = sol.Nup;
     s.Ndown = sol.Ndown;
@@ -199,23 +245,44 @@ solMOSP MOSP::neighborInsertion(solMOSP sol) {
 
     std::random_device rnd_device;
     std::mt19937 mersenne_engine {rnd_device()};
-    std::uniform_int_distribution<int> distPattern(0, numberPatterns - 1);
-
-    int patternFrom = 0, patternTo = 0;
-
-    do {
-        patternFrom = distPattern(mersenne_engine);
-        patternTo = distPattern(mersenne_engine);
-    } while (patternFrom == patternTo);
-
-    int element = s.sol[patternFrom];
-    s.sol.erase(s.sol.begin() + patternFrom);
-
-    if (patternTo > patternFrom) {
-        patternTo--;  // ajuste porque o vetor ficou menor após remoção
+    
+    if(sequenceForm){
+        std::uniform_int_distribution<int> distPattern(0, numberPieces - 1);
+    
+        int pieceFrom = 0, pieceTo = 0;
+    
+        do {
+            pieceFrom = distPattern(mersenne_engine);
+            pieceTo = distPattern(mersenne_engine);
+        } while (pieceFrom == pieceTo);
+    
+        int element = s.sol[pieceFrom];
+        s.sol.erase(s.sol.begin() + pieceFrom);
+    
+        if (pieceTo > pieceFrom) {
+            pieceTo--;  // ajuste porque o vetor ficou menor após remoção
+        }
+    
+        s.sol.insert(s.sol.begin() + pieceTo, element);
+    } else {
+        std::uniform_int_distribution<int> distPattern(0, numberPatterns - 1);
+    
+        int patternFrom = 0, patternTo = 0;
+    
+        do {
+            patternFrom = distPattern(mersenne_engine);
+            patternTo = distPattern(mersenne_engine);
+        } while (patternFrom == patternTo);
+    
+        int element = s.sol[patternFrom];
+        s.sol.erase(s.sol.begin() + patternFrom);
+    
+        if (patternTo > patternFrom) {
+            patternTo--;  // ajuste porque o vetor ficou menor após remoção
+        }
+    
+        s.sol.insert(s.sol.begin() + patternTo, element);
     }
-
-    s.sol.insert(s.sol.begin() + patternTo, element);
 
     s.Nup = sol.Nup;
     s.Ndown = sol.Ndown;
@@ -224,62 +291,56 @@ solMOSP MOSP::neighborInsertion(solMOSP sol) {
 }
 
 double MOSP::evaluate(solMOSP& sol) {
-    std::bitset<1000> piecesRead;
-    std::bitset<1000>  patternUsed;
-    std::vector<int> patternSequence;
+    
     sol.construcTime = constructSolutionTime;
+    
+    std::vector<int> patternSequence;
+    
+    if (sequenceForm) {
+        std::bitset<1000> piecesRead;
+        std::bitset<1000> patternUsed;
+
+        for (int piece : sol.sol) {
+            piecesRead.set(piece);
+            const auto& candidatos = patternsPorPeca[piece];
+            auto notRead = ~piecesRead;
+            
+
+            for (int pattern : candidatos) {
+                if (!patternUsed.test(pattern) &&
+                    (patternBitsets[pattern] & notRead).none()) {
+                    patternSequence.push_back(pattern);
+                    patternUsed.set(pattern);
+                }
+            }
+        }
+    } else {
+        patternSequence = sol.sol;
+    }
 
     const int OPEN = 1, CLOSED = 0;
 
     std::vector<int> stack(numberPieces, CLOSED);
-
-    std::vector<int> vet(numberPieces);
-    vet = stackSizeEvaluation;
+    std::vector<int> vet = stackSizeEvaluation;
 
     int openStacks = 0;
     int closedStacks = 0;
     int maxOpenStacks = -1;
-    // int freqMaxOpenStacks = 0;
 
-    for (int piece : sol.sol) {
-        piecesRead.set(piece);
-        const auto& candidatos = patternsPorPeca[piece];
-        auto notRead = ~piecesRead;
-
-        for (int pattern : candidatos) {
-            if (!patternUsed.test(pattern) &&
-                (patternBitsets[pattern] & notRead).none()) {
-                patternSequence.push_back(pattern);
-                patternUsed.set(pattern);
-            }
-        }
-    }
-
-    for (int i = 0; i < numberPatterns; i++) {
-        // int index = sol.sol[i]; // padrão atual da solução
-        int index = patternSequence[i]; // padrão atual da solução
-
-
+    for (int index : patternSequence) {
         for (int peca : patternPieces[index]) {
-            vet[peca]--; // uma unidade da peça foi produzida
+            vet[peca]--;
 
             if (stack[peca] == CLOSED) {
-                openStacks++;           // nova pilha aberta
+                openStacks++;
                 stack[peca] = OPEN;
             }
 
             if (vet[peca] == 0) {
-                closedStacks++;         // pilha fechada
+                closedStacks++;
                 stack[peca] = CLOSED;
             }
         }
-
-        // if (openStacks > maxOpenStacks) {
-        //     maxOpenStacks = openStacks;
-        //     freqMaxOpenStacks = 1;
-        // } else if(openStacks == maxOpenStacks){
-        //     freqMaxOpenStacks++;
-        // }
 
         if (openStacks > maxOpenStacks) {
             maxOpenStacks = openStacks;
@@ -289,9 +350,5 @@ double MOSP::evaluate(solMOSP& sol) {
         closedStacks = 0;
     }
 
-    //soma em decimal o valor final de todos os openstacks
     return maxOpenStacks;
 }
-
-//valor*1000/1000
-//valor*800

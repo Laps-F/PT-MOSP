@@ -27,8 +27,8 @@
 
 # 1:            2:                   3:     4:                      5:
 tempIni          "--TEMP_INIT "      c      (0.01, 0.1, 1)
-tempFim          "--TEMP_FIM "       c      (3, 5, 10)
-MCL              "--MCL "            c      (300, 400, 500, 600)
+tempFim          "--TEMP_FIM "       c      (5, 10)
+MCL              "--MCL "            c      (600, 700)
 Dist_temp        "--TEMP_DIST "      c      (1, 2, 3, 4)
 Movimento        "--MOV_TYPE "       c      (0, 1, 2)
 tipo_UP          "--TYPE_UPDATE "    c      (0, 1, 2, 3)

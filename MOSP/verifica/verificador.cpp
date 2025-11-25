@@ -29,9 +29,9 @@ bool lerMatriz(const string& nomeArquivo) {
 
     patternPieces.resize(numberPatterns);
 
+    for (int i = 0; i < numberPieces; i++) {
     for (int j = 0; j < numberPatterns; j++) {
-        for (int i = 0; i < numberPieces; i++) {
-            int value;
+        int value;
             file >> value;
             if (value == 1) {
                 patternPieces[j].push_back(i); // armazena o índice da peça (j) associada ao padrão (i)
@@ -166,12 +166,11 @@ void verificarArquivo(const string& caminhoEntrada, const string& caminhoSolucao
     }
 
     int valorCalculado = calcularMaxPilhasAbertas();
-
+    
     if (flag){
         cout << "  Valor declarado na solução: " << valorSolu << endl;
         cout << "  Valor calculado pelo verificador: " << valorCalculado << endl;
     }
-
     if (valorCalculado == valorSolu) {
         if (flag)
             cout << "  ✅ Solução VÁLIDA!" << endl;
@@ -198,8 +197,9 @@ int main(int argc, char* argv[]) {
         string solucao = argv[2];
         verificarArquivo(entrada, solucao, outValidos, outInvalidos, true);
     } else {
-        string pastaEntrada = "../Frinhani/Instances/";
-        string pastaSolucao = "resultados";
+        string pastaEntrada = "../../Frinhani/Instances/";
+        string pastaSolucao = "../resultados-conjunto54";
+
         
         for (const auto& entrada : fs::directory_iterator(pastaEntrada)) {
             if (!entrada.is_regular_file()) continue;

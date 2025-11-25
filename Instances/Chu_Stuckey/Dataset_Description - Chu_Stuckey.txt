@@ -1,0 +1,17 @@
+DATASET NAME: Chu & Stuckey
+
+AVAILABLE WITH AUTHOR: gchu@csse.unimelb.edu.au
+
+DESCRIPTION:
+Set of 200 instances with 30, 40, 50, 75, 100 or 125 pieces and patterns. For each combination of numbers of pieces and patterns, sets of five instances with 2, 4, 6, 8 and 10 pieces per pattern were created by a pseudorandom instance generator, totaling 25 instances by dimension. None of these instances have MOSP graph topology that leads to polynomial time solution (i.e, complete graphs, trees or 1-trees).
+ 
+FILE FORMAT:
+- Each file represents a single instance.
+- First line: number of patterns (m) and number of pieces (n)
+- In the following lines, a binary matrix m x n is described.
+
+HOW TO CITE:
+Chu G, Stuckey PJ. Minimizing the maximum number of open stacks by customer search, International Conference on Principles and Practice of Constraint Programming, Springer, p. 242-257, 2009.
+
+ADDITIONAL INFORMATION:
+The original files have been obtained directly with authors. Not an original instance, the first line wich contains the instance name was removed and the matrix orientation changed to patterns x pieces.

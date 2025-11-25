@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void saveResults(const string& fn, const solMOSP& sol, int elapsed, int trocas, int readForm, int instance) {
+void saveResults(const string& fn, const solMOSP& sol, int elapsed, int trocas, string dir, int instance, int replicas) {
     string basename = fn.substr(fn.find_last_of("/\\") + 1);
     string name_no_ext = basename.substr(0, basename.find_last_of('.'));
     
@@ -15,15 +15,20 @@ void saveResults(const string& fn, const solMOSP& sol, int elapsed, int trocas, 
     while (getline(ss, token, '-')) parts.push_back(token);
 
     string dimensao;
-    if (parts.size() >= 3) {
-        dimensao = parts[1] + " " + parts[2];
+    ifstream file(fn);
+    if (!file.is_open()) {
+        cerr << "Erro ao abrir arquivo: " << fn << endl;
+        return;
+    }
+
+    string line;
+    if (getline(file, line)) {
+        dimensao = line;
     } else {
         dimensao = "?";
     }
 
-    string dir = (readForm) ? "resultados" : "resultados-challenge";
-    filesystem::create_directories(dir);
-    string out_name = dir + "/" + name_no_ext + "(" + std::to_string(instance) + ")_res.txt";
+    string out_name = dir + "/" + name_no_ext + "(" + to_string(5+instance) + ")_res.txt";
 
     ofstream ofs(out_name);
     if (!ofs.is_open()) {
@@ -47,18 +52,22 @@ void saveResults(const string& fn, const solMOSP& sol, int elapsed, int trocas, 
 int main(int argc, char* argv[])
 {
 	//varibles
+    int exec = 0;
 	float tempIni = 0.01;
 	float tempfim = 10;
-	int tempN = 5;
+	int tempN = 11;
 	int MCL = 600;
-	int PTL = 2400;	
-	int tempUp = 960;
+	int PTL = 2000;	
+	int tempUp = 400;
 	int tempD = 2;
 	int uType = 3;
     int mType = 2;
     int read = 1;
-	// int thN = thread::hardware_concurrency();	
-	int thN = 5;
+    int sequence = 1;
+	int thN = thread::hardware_concurrency();	
+    string outDir = "resultados";
+
+	// int thN = 11;
 	vector<string> arguments(argv + 1, argv + argc);	
 	
 	// Instance file name
@@ -90,34 +99,39 @@ int main(int argc, char* argv[])
         }
         else if(arguments[i]== "--THREAD_USED")
             thN = stoi(arguments[i+1]);
-        else if(arguments[i]== "--READ")
-            read = stoi(arguments[i+1]);
+        else if(arguments[i]== "--SEQUENCE")
+            sequence = stoi(arguments[i+1]);
+        else if(arguments[i]== "--INST")
+            exec = stoi(arguments[i+1]);
+        else if(arguments[i]== "--OUTDIR")
+            outDir = arguments[i+1];
     }
-	
-    for(int i=0; i<5; i++) {
-        // Create MOSP object
 
-        MOSP* prob = new MOSP(fn, read, mType);
-        
-        // Create and start PT 
-        PT<solMOSP> algo(tempIni, tempfim, tempN, MCL, PTL, 0, tempD, uType, tempUp);
-        // descobrir como chama o construction do pt e sobrescrever 2 replicas com o MCNH primeira e do meio
-        ExecTime et;
-        ResultPT<solMOSP> resultado = algo.start(thN, prob);
-        solMOSP sol = resultado.best;             // pega a melhor solução
-        int elapsed = et.getTimeMs();
-        int trocas = resultado.numTrocas;   
-        int construcTime = sol.construcTime;
+    // if(outDir == "Results/Frinhani" || outDir == "Results/Frinhani/temp") read = 1;
 
-        saveResults(fn, sol, elapsed + construcTime, sol.ptl, read, i);
+    MOSP* prob = new MOSP(fn, read, mType, sequence);
+    
+    // Create and start PT 
 
-        // cout<<construcTime<<endl;
-        // cout<<"Trocas: "<<sol.ptl<<endl; 
+    PT<solMOSP> algo(tempIni, tempfim, tempN, MCL, PTL, 0, tempD, uType, tempUp);
 
-        // cout<<sol.evalSol<<endl;
-    }
+    ExecTime et;
+    ResultPT<solMOSP> resultado = algo.start(thN, prob);
+    solMOSP sol = resultado.best;             // pega a melhor solução
+    int elapsed = et.getTimeMs();
+    int trocas = resultado.numTrocas;   
+    int construcTime = sol.construcTime;
+    int execTime_ms = elapsed + construcTime;
+    float execTime_s = execTime_ms / 1000;
+
+
+    saveResults(fn, sol, execTime_ms, sol.ptl, outDir, exec, tempN);
+
+    // cout<<construcTime<<endl;
+    // cout<<"Trocas: "<<sol.ptl<<endl; 
+    // float resultForIrace = sol.evalSol + execTime_s/10000;
+    // cout<<resultForIrace<<endl;
 
 	return 0;
 }
 
-// ./mainMOSP "../Frinhani/Instances/Random-400-400-4-6.txt" --TEMP_INIT 1 --TEMP_FIM 3 --MCL 500 --TEMP_DIST 4 --MOV_TYPE 1 --TYPE_UPDATE 2 --TEMP_UPDATE 5

@@ -33,6 +33,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <iostream>
 #include "LinkedList.h"				//includes the code of the Trotter-Johnson algorithm
 
 typedef struct	{
@@ -252,15 +253,17 @@ void readProblem(char *fileName)
 	// char buffer[1024];
 	// fgets(buffer, sizeof(buffer), fpIn); 
 	
-	fscanf(fpIn, "%d %d", &nPieces, &nPatterns);
+	fscanf(fpIn, "%d %d", &nPatterns, &nPieces);
+	// fscanf(fpIn, "%d %d", &nPieces, &nPatterns);
 
 	nPatternsOriginal = nPatterns;
 
 	initialization();										//initializes all structures, vectors and matrices
-
-		for(i=0; i<nPatterns; i++)
+	
+	// for(j=nPieces-1; j>=0; j--)
+	for(j=0; j<nPieces; j++)
 	{
-	for(j=nPieces-1; j>=0; j--)
+		for(i=0; i<nPatterns; i++)
 		{
 			fscanf(fpIn, "%d", &matrix[i][j]);
 
@@ -528,9 +531,29 @@ void HNCM()
            }
         }
     }
+	
+    // for(i=0; i<nPieces; i++)
+    //     spe[i] = OPEN[i];
 
-    for(i=0; i<nPieces; i++)
-        spe[i] = OPEN[i];
+	int speIndex = 0;
+
+    // 1. Copia todas as peças que foram encontradas pela heurística
+    //    (openIndex foi sendo incrementado quando adicionamos em OPEN)
+    for (i = 0; i < openIndex; i++) {
+        spe[speIndex++] = OPEN[i];
+    }
+
+    // 2. Adiciona todas as peças isoladas (que nunca foram marcadas como .open)
+    for (i = 0; i < nPieces; i++) {
+        if (!vertex[i].open) { // Se a flag 'open' for 0, a peça foi isolada
+            spe[speIndex++] = i;
+        }
+    }
+
+    // Opcional: Verificação
+    if (speIndex != nPieces) {
+         fprintf(stderr, "Erro: A sequencia de pecas esta incompleta. Esperado %d, obtido %d\n", nPieces, speIndex);
+    }
 }
 
 /*

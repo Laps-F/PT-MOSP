@@ -1,0 +1,17 @@
+DATASET NAME: First Constraint Modelling Challenge
+
+AVAILABLE IN: https://ipg.host.cs.st-andrews.ac.uk/challenge/ChallengeInstances2005.zip
+
+DESCRIPTION:
+This dataset contains 46 selected artificial MOSP instances from the original set of First Constraint Modeling Challenge for the MOSP. These instances were selected considering their dimensions and the absence of special structures that facilitate the solution.
+ 
+FILE FORMAT:
+- Each file represents a single instance.
+- First line: number of patterns (m) and number of pieces (n)
+- In the following lines, a binary matrix m x n is described.
+
+HOW TO CITE:
+Smith BM, Gent IP. Constraint modelling challenge 2005, IJCAI 2005 Fifth Workshop on Modelling and Solving Problems with Constraints, p. 1-8, 2005.
+
+ADDITIONAL INFORMATION:
+The files have been downloaded directly from the Constraint Modelling Challenge 2005 website. Not an original instance, individual files obtained from the original one. The original files can be downloaded in the First Constraint Modelling Challenge site.

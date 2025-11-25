@@ -36,6 +36,7 @@ struct solMOSP: public solution{
 class MOSP: public Problem<solMOSP>{
 	private:
 
+		int sequenceForm;
 		int numberPatterns;
 		int numberPieces;
 		int maxNumberPiecesPerPatern;
@@ -44,14 +45,13 @@ class MOSP: public Problem<solMOSP>{
 		std::atomic<int> constructionCallIndex{0};
 		
 		std::string fn;
-		// std::vector<std::vector<bool>> incidenceMatrix;
 		std::vector<int> stackSizeEvaluation;
 		std::vector<std::vector<int>> patternPieces;
     	std::vector<std::bitset<1000>> patternBitsets;
 		std::vector<std::vector<int>> patternsPorPeca;
 		
 	public:
-		MOSP(std::string filename, int readForm, int neighborStrategy);
+		MOSP(std::string filename, int readForm, int neighborStrategy, int sequenceForm);
 		~MOSP();
 		solMOSP construction();
 		solMOSP neighbor(solMOSP sol);
