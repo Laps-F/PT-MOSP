@@ -9,9 +9,9 @@ Links to important files and symbols
 - Solver interface and types: [MOSP/MOSP.h](MOSP/MOSP.h)
 - PTAPI integration: [PTAPI-main/README.md](PTAPI-main/README.md)
 - Dataset descriptions:
-  - [Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt](Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt)
-  - [Instances/Chu_Stuckey/Dataset_Description - Chu_Stuckey.txt](Instances/Chu_Stuckey/Dataset_Description - Chu_Stuckey.txt)
-  - [Instances/Challenge/Dataset_Description - Challenge.txt](Instances/Challenge/Dataset_Description - Challenge.txt)
+  - [Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt](Instances/Frinhani/Dataset_Description%20-%20Frinhani,%20Carvalho%20&%20Soma.txt)
+  - [Instances/Chu_Stuckey/Dataset_Description - Chu_Stuckey.txt](Instances/Chu_Stuckey/Dataset_Description%20-%20Chu_Stuckey.txt)
+  - [Instances/Challenge/Dataset_Description - Challenge.txt](Instances/Challenge/Dataset_Description%20-%20Challenge.txt)
   - Instances/Cavalho_Soma - Does not have a description file here.
   - Instances/SCOOP - Does not have a description file here.
 - Tables:
