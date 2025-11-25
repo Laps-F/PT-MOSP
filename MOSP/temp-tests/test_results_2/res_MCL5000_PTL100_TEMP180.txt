@@ -1,5 +1,0 @@
-MCL: 5000
-PTL: 100
-TempUpdate: 180
-Solução: 999
-Tempo: 44640
