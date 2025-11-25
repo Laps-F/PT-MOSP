@@ -14,6 +14,20 @@ Links to important files and symbols
   - [Instances/Challenge/Dataset_Description - Challenge.txt](Instances/Challenge/Dataset_Description - Challenge.txt)
   - Instances/Cavalho_Soma - Does not have a description file here.
   - Instances/SCOOP - Does not have a description file here.
+- Tables:
+  - [MOSP/Results-tables/Final_Results.xlsx](MOSP/Results-tables/Final_Results.xlsx)
+  - [MOSP/Results-tables/Results_CarvalhoSoma.xlsx](MOSP/Results-tables/Results_CarvalhoSoma.xlsx)
+  - [MOSP/Results-tables/Results_Challenge.xlsx](MOSP/Results-tables/Results_Challenge.xlsx)
+  - [MOSP/Results-tables/Results_ChuStuckey.xlsx](MOSP/Results-tables/Results_ChuStuckey.xlsx)
+  - [MOSP/Results-tables/Results_FaggioliBentivoglio.xlsx](MOSP/Results-tables/Results_FaggioliBentivoglio.xlsx)
+  - [MOSP/Results-tables/Results_Frinhani.xlsx](MOSP/Results-tables/Results_Frinhani.xlsx)
+  - [MOSP/Results-tables/Results_SCOOP.xlsx](MOSP/Results-tables/Results_SCOOP.xlsx)
+- Graphs:
+  - [MOSP/Results-graphs/graph_Carvalho_Soma.png](MOSP/Results-graphs/graph_Carvalho_Soma.png.xlsx)
+  - [MOSP/Results-graphs/graph_Challenge.png](MOSP/Results-graphs/graph_Challenge.png.xlsx)
+  - [MOSP/Results-graphs/graph_Chu_Stuckey.png](MOSP/Results-graphs/graph_Chu_Stuckey.png.xlsx)
+  - [MOSP/Results-graphs/graph_Faggioli_Bentivoglio.png](MOSP/Results-graphs/graph_Faggioli_Bentivoglio.png.xlsx)
+  - [MOSP/Results-graphs/graph_SCOOP.png](MOSP/Results-graphs/graph_SCOOP.png.xlsx)
 - Tuning and experiment files: [tuning/configurations.txt](tuning/configurations.txt), [tuning/instances-list.txt](tuning/instances-list.txt), [tuning/out_article.txt](tuning/out_article.txt)
 
 Repository layout
@@ -25,6 +39,19 @@ Repository layout
 - PTAPI-main/ — problem template and interfaces
 - tuning/ — scripts and configuration files for parameter tuning and experiment reproduction
 - Results/ — runtime results produced by the runs (created by the Makefile)
+
+Tables and Figures
+
+- Where to find raw outputs
+  - MOSP/Results/: raw per-run text outputs (grouped by dataset/source).
+  - MOSP/Results-tables/ and MOSP/stats/: scripts/csvs for aggregated tables and summary statistics.
+  - MOSP/Results-graphs/: plotting scripts and generated images (graph.py).
+
+- Table types and scripts
+  - Per-run raw results: one file per run; include runtime, objective, seed, instance name and parameters.
+  - Aggregated tables: use MOSP/Results-tables/gerar_csv.py to convert per-run outputs into CSVs for statistical processing.
+  - Statistics script: MOSP/stats/statistics.py reads aggregated CSVs and computes summary statistics for PieceRank x PT-MOSP.
+
 
 Requirements and dependencies
 - Linux / macOS environment with:

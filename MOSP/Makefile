@@ -52,31 +52,6 @@ run-all: $(TARGET)
 	done
 	@echo "==> Execução de todas as instâncias foi concluída."
 
-# run-folder: $(TARGET)
-# 	@# Verifica se a variável FOLDER foi passada
-# 	@if [ -z "$(FOLDER)" ]; then \
-# 		echo "Erro: Especifique o diretório do criador."; \
-# 		exit 1; \
-# 	fi; \
-# 	echo "DEBUG: FOLDER='$(FOLDER)'"; \
-# 	CREATOR_NAME="$(FOLDER)"; \
-# 	INST_SUBDIR=../Instances/"$$CREATOR_NAME"; \
-# 	RESULT_SUBDIR=Results/"$$CREATOR_NAME"; \
-# 	if [ ! -d "$$INST_SUBDIR" ]; then \
-# 		echo "Erro: Diretório de instância não encontrado: [$$INST_SUBDIR]"; \
-# 		exit 1; \
-# 	fi; \
-# 	echo "==> Processando instâncias de: $$CREATOR_NAME (em $$INST_SUBDIR)"; \
-# 	mkdir -p "$$RESULT_SUBDIR"; \
-# 	find "$$INST_SUBDIR" -name '*.txt' | while read file; do \
-# 		echo "    ==> Executando $$file 5 vezes..."; \
-# 		for i in $$(seq 0 4); do \
-# 			echo "        --> Rodada $$i..."; \
-# 			./$(TARGET) "$$file" $(PARAMS) --INST $$i --OUTDIR "$$RESULT_SUBDIR"; \
-# 		done; \
-# 	done; \
-# 	echo "==> Execução de $$CREATOR_NAME concluída."
-
 run-folder: $(TARGET)
 	@if [ -z "$(FOLDER)" ]; then \
 		echo "Erro: Especifique o diretório do criador."; \
