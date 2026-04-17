@@ -8,10 +8,10 @@ from gspread_dataframe import set_with_dataframe
 from google.oauth2.service_account import Credentials
 
 # --- Settings ---
-RESULTS_FOLDER = "Carvalho_Soma"
-GOOGLE_SHEET_NAME = "Results_CarvalhoSoma"  # Changed sheet name
+RESULTS_FOLDER = "../Results/Frinhani"
+GOOGLE_SHEET_NAME = "Results_Frinhani"  # Changed sheet name
 FOLDER_ID = "1uUbZAu3BT5D4LrwBGA_r5Cq88KaBwwah"
-CREDENTIALS_FILE = "shaped-buttress-383520-602982384f84.json"
+CREDENTIALS_FILE = "../shaped-buttress-383520-602982384f84.json"
 
 # Regex patterns remain the same
 REGEX_TIPO_1_SPSHAW = re.compile(r'([a-zA-Z]+)(\d+)?\((\d+)\)_res\.txt')
