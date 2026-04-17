@@ -331,7 +331,7 @@ def main():
             elif len(sys.argv) == 1:
                 # Mantém os mesmos caminhos que você definiu
                 pasta_entrada = Path("../../Instances/SCOOP")
-                pasta_solucao = Path("../Results/SCOOP")
+                pasta_solucao = Path("../Results2/SCOOP/BRKGA")
                 
                 if not pasta_entrada.is_dir():
                     print(f"Erro: Pasta de instâncias não encontrada: {pasta_entrada}", file=sys.stderr)
