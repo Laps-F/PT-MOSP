@@ -1,53 +1,11 @@
 #include <cstdlib>
+#include <filesystem>
 #include "../PTAPI-main/include/ExecTime.h"
 #include "./MOSP.h"
 #include "../PTAPI-main/include/PT.h"
+#include "results.h"
 
 using namespace std;
-
-void saveResults(const string& fn, const solMOSP& sol, int elapsed, int trocas, string dir, int instance, int replicas) {
-    string basename = fn.substr(fn.find_last_of("/\\") + 1);
-    string name_no_ext = basename.substr(0, basename.find_last_of('.'));
-    
-    vector<string> parts;
-    stringstream ss(name_no_ext);
-    string token;
-    while (getline(ss, token, '-')) parts.push_back(token);
-
-    string dimensao;
-    ifstream file(fn);
-    if (!file.is_open()) {
-        cerr << "Erro ao abrir arquivo: " << fn << endl;
-        return;
-    }
-
-    string line;
-    if (getline(file, line)) {
-        dimensao = line;
-    } else {
-        dimensao = "?";
-    }
-
-    string out_name = dir + "/" + name_no_ext + "(" + to_string(5+instance) + ")_res.txt";
-
-    ofstream ofs(out_name);
-    if (!ofs.is_open()) {
-        cerr << "Erro ao abrir arquivo de resultados: " << out_name << endl;
-        return;
-    }
-
-
-    ofs << dimensao << '\n'
-        << elapsed << '\n'
-        << sol.evalSol << '\n'
-        << trocas << '\n'
-        << sol.maxNumberPiecesPerPatern << '\n';
-
-    for (int i : sol.sol) {
-        ofs << i << ' ';
-    }
-    ofs.close();
-}
 
 int main(int argc, char* argv[])
 {
@@ -62,7 +20,7 @@ int main(int argc, char* argv[])
 	int tempD = 2;
 	int uType = 3;
     int mType = 2;
-    int read = 1;
+    int read = 0;
     int sequence = 1;
 	int thN = thread::hardware_concurrency();	
     string outDir = "resultados";
@@ -107,6 +65,10 @@ int main(int argc, char* argv[])
             outDir = arguments[i+1];
     }
 
+    // Create PT subdirectory
+    std::filesystem::create_directories(outDir + "/PT");
+    outDir += "/PT";
+
     // if(outDir == "Results/Frinhani" || outDir == "Results/Frinhani/temp") read = 1;
 
     MOSP* prob = new MOSP(fn, read, mType, sequence);
@@ -124,8 +86,13 @@ int main(int argc, char* argv[])
     int execTime_ms = elapsed + construcTime;
     float execTime_s = execTime_ms / 1000;
 
+    SolResult res;
+    res.evalSol = sol.evalSol;
+    res.maxNumberPiecesPerPatern = sol.maxNumberPiecesPerPatern;
+    res.sol = sol.sol;
+    res.construcTime = construcTime;
 
-    saveResults(fn, sol, execTime_ms, sol.ptl, outDir, exec, tempN);
+    saveResults(fn, res, execTime_ms, sol.ptl, outDir, exec, tempN);
 
     // cout<<construcTime<<endl;
     // cout<<"Trocas: "<<sol.ptl<<endl; 
