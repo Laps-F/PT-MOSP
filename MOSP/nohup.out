@@ -2627,3 +2627,29 @@ Time limit reached at generation 1
         --> Processando ../Instances/Frinhani/Random-600-600-14-8.txt (Rodada 0)
 BRKGA START: instance='../Instances/Frinhani/Random-600-600-14-8.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
 make: *** [Makefile:129: run-folder-brkga] Interrupt
+DEBUG: FOLDER='Frinhani'
+==> Processando instâncias de: Frinhani (em ../Instances/Frinhani) com BRKGA
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt' m=163840 n=0 pop=1638400 pe=50 pm=327680 gens=100 time_limit=1080s threads=12
+Killed
+        --> Processando ../Instances/Frinhani/Random-400-400-2-1.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-400-400-2-1.txt' m=400 n=400 pop=4000 pe=50 pm=800 gens=100 time_limit=1080s threads=12
+make: *** [Makefile:129: run-folder-brkga] Interrupt
+DEBUG: FOLDER='Frinhani'
+==> Processando instâncias de: Frinhani (em ../Instances/Frinhani) com BRKGA
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt' m=163808 n=0 pop=1638080 pe=50 pm=327616 gens=100 time_limit=1080s threads=12
+Killed
+        --> Processando ../Instances/Frinhani/Random-600-600-14-8.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-14-8.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+make: *** [Makefile:129: run-folder-brkga] Interrupt
+DEBUG: FOLDER='Frinhani'
+==> Processando instâncias de: Frinhani (em ../Instances/Frinhani) com BRKGA
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt' m=163808 n=0 pop=1638080 pe=50 pm=327616 gens=100 time_limit=1080s threads=12
+Killed
+        --> Processando ../Instances/Frinhani/Random-600-600-14-8.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-14-8.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
