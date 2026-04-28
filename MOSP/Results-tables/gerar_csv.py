@@ -8,8 +8,8 @@ from gspread_dataframe import set_with_dataframe
 from google.oauth2.service_account import Credentials
 
 # --- Settings ---
-RESULTS_FOLDER = "../Results/Frinhani"
-GOOGLE_SHEET_NAME = "Results_Frinhani"  # Changed sheet name
+RESULTS_FOLDER = "../Results2/Challenge/BRKGA"
+GOOGLE_SHEET_NAME = "Results_BRKGA_Challenge"  # Changed sheet name
 FOLDER_ID = "1uUbZAu3BT5D4LrwBGA_r5Cq88KaBwwah"
 CREDENTIALS_FILE = "../shaped-buttress-383520-602982384f84.json"
 

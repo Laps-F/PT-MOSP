@@ -2,6 +2,7 @@
 #define MOSP_DECODER_H
 
 #include <vector>
+#include <chrono>
 
 class MospDecoder {
 private:
@@ -21,12 +22,18 @@ private:
                                    int pattern,
                                    size_t insert_pos,
                                    std::vector<int>& events) const;
-
+    std::chrono::high_resolution_clock::time_point start_time;
+    double time_limit;
 public:
-    MospDecoder(int num_patterns, int num_items, const std::vector<std::vector<bool>>& init_matrix);
+    MospDecoder(int m, int n, const std::vector<std::vector<bool>>& matrix, 
+        std::chrono::high_resolution_clock::time_point start_time, 
+        double time_limit);
     ~MospDecoder();
-
+    
     double decode(const std::vector<double>& chromosome, std::vector<int>* solution = nullptr) const;
+    void disableTimeLimit() {
+        time_limit = 0.0;
+    }
 };
 
 #endif

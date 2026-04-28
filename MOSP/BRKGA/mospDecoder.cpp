@@ -4,10 +4,10 @@
 #include <limits>
 #include <iostream>
 #include <atomic>
+#include <chrono>
 
-MospDecoder::MospDecoder(int num_patterns, int num_items, const std::vector<std::vector<bool>>& init_matrix) 
-    : m(num_patterns), n(num_items), matrix(init_matrix) {
-    
+MospDecoder::MospDecoder(int m, int n, const std::vector<std::vector<bool>>& matrix, std::chrono::high_resolution_clock::time_point start_time, double time_limit)
+    : m(m), n(n), matrix(matrix), start_time(start_time), time_limit(time_limit) {
     // PRÉ-PROCESSAMENTO: Lista de itens por padrão
     items_in_pattern.resize(m);
     for (int p = 0; p < m; ++p) {
@@ -145,8 +145,20 @@ int MospDecoder::calculate_mosp_with_insert(const std::vector<int>& partial_solu
 
 
 // --- DECODER PRINCIPAL ---
-
 double MospDecoder::decode(const std::vector<double>& chromosome, std::vector<int>* solution) const {
+    
+    // VERIFICAÇÃO DE TEMPO:
+    if (time_limit > 0.0) {
+        auto current_time = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<double> elapsed = current_time - start_time;
+        if (elapsed.count() >= time_limit) {
+            // Se estourou o tempo, aborta o cálculo instantaneamente.
+            // Retorna o "pior fitness possível" (assumindo que o problema é de MINIMIZAÇÃO).
+            // O BRKGA vai ignorar esse cromossomo e a geração terminará quase na mesma hora.
+            return std::numeric_limits<double>::max(); 
+        }
+    }
+
     // Buffer reutilizável para evitar alocações no loop interno
     std::vector<int> events_buffer(m + 2, 0);
 
@@ -203,7 +215,26 @@ double MospDecoder::decode(const std::vector<double>& chromosome, std::vector<in
         }
     }
 
-    // 3. Avaliação do Fitness (MMOSP)
+    // -------------------------------------------------------------
+    // 3. FASE 3 DO ARTIGO: Chromosome Adjustment (Ajuste do Cromossomo)
+    // -------------------------------------------------------------
+    // Fazemos um cast no 'const' para podermos injetar o aprendizado 
+    // da busca local de volta no DNA do BRKGA.
+    std::vector<double>& modifiable_chromosome = const_cast<std::vector<double>&>(chromosome);
+    
+    // Pegamos os alelos (valores) originais gerados pelo BRKGA e os ordenamos
+    std::vector<double> sorted_genes = modifiable_chromosome;
+    std::sort(sorted_genes.begin(), sorted_genes.end());
+    
+    // Agora, garantimos que o cromossomo reflita exatamente a nova ordem gerada pela busca local.
+    // O padrão que terminou na posição 'i' na partial_solution ganha o i-ésimo menor gene.
+    for (size_t i = 0; i < partial_solution.size(); ++i) {
+        int final_pattern = partial_solution[i];
+        modifiable_chromosome[final_pattern] = sorted_genes[i];
+    }
+    // -------------------------------------------------------------
+
+    // 4. Avaliação do Fitness (MMOSP)
     std::vector<int> mosp_k_list = get_open_stacks_per_pattern(partial_solution);
     int max_mosp = 0;
     double sum_mosp = 0.0;
@@ -213,7 +244,6 @@ double MospDecoder::decode(const std::vector<double>& chromosome, std::vector<in
         sum_mosp += val;
     }
 
-    // Se a matriz for completamente vazia
     if (max_mosp == 0) return 0.0;
 
     // Fórmula MMOSP do artigo: MOSP + (soma(MOSP_k) / (m * MOSP))
@@ -223,6 +253,5 @@ double MospDecoder::decode(const std::vector<double>& chromosome, std::vector<in
         *solution = partial_solution;
     }
 
-    // A API recebe esse double e sabe que quanto menor, melhor.
     return mmosp; 
 }

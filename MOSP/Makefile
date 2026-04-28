@@ -21,7 +21,7 @@ RESULT_DIR_B = resultados-challenge
 
 # Parâmetros fixos
 # PARAMS = --TEMP_INIT 0.01 --TEMP_FIM 10 --N_REPLICAS 5 --MCL 600 --TEMP_DIST 2 --MOV_TYPE 2 --TYPE_UPDATE 0 --THREAD_USED 5
-PARAMS = --TEMP_INIT 0.01 --TEMP_FIM 10 --N_REPLICAS 11 --MCL 60 --PTL 20 --TEMP_DIST 2 --MOV_TYPE 2 --TYPE_UPDATE 1 --TEMP_UPDATE 3
+PARAMS = --TEMP_INIT 0.01 --TEMP_FIM 10 --N_REPLICAS 11 --MCL 600 --PTL 2000 --TEMP_DIST 2 --MOV_TYPE 2 --TYPE_UPDATE 1 --TEMP_UPDATE 3
 
 # Regra principal
 all: $(TARGET)
@@ -102,24 +102,28 @@ run-one: $(TARGET)
 # Regras para BRKGA
 run-all-brkga: $(TARGET_BRKGA)
 	@echo "==> Iniciando execução de todas as instâncias com BRKGA..."
-	@find $(INST_DIR) -mindepth 1 -maxdepth 1 -type d | while read subdir; do \
+	@ { \
+		find $(INST_DIR) -mindepth 1 -maxdepth 1 -type d ! -name "Frinhani"; \
+		find $(INST_DIR) -mindepth 1 -maxdepth 1 -type d -name "Frinhani"; \
+	} | while read subdir; do \
+		if [ -z "$$subdir" ]; then continue; fi; \
 		CREATOR_NAME=$$(basename "$$subdir"); \
 		RESULT_SUBDIR="$(RESULT_DIR)/$$CREATOR_NAME"; \
 		\
-		echo "--> Processando instâncias de: $$CREATOR_NAME"; \
-		\
+		echo "==> Processando instâncias de: $$CREATOR_NAME (em $$subdir) com BRKGA"; \
 		mkdir -p "$$RESULT_SUBDIR"; \
 		\
-		@find "$$subdir" -name '*.txt' | while read file; do \
-			echo "    ==> Executando $$file 5 vezes..."; \
-			\
-			@for i in $$(seq 0 4); do \
-				echo "        --> Rodada $$i..."; \
+		for i in $$(seq 0 4); do \
+			echo "    ==> Iniciando Rodada Mestra $$i (executando todos os arquivos 1x)..."; \
+			find "$$subdir" -name '*.txt' | while read file; do \
+				echo "        --> Processando $$file (Rodada $$i)"; \
 				./$(TARGET_BRKGA) "$$file" --INST $$i --OUTDIR "$$RESULT_SUBDIR"; \
 			done; \
+			echo "    ==> Rodada Mestra $$i concluída."; \
 		done; \
+		echo "==> Execução de $$CREATOR_NAME com BRKGA concluída."; \
 	done
-	@echo "==> Execução de todas as instâncias com BRKGA foi concluída."
+	@echo "==> Execução de TODAS as instâncias com BRKGA foi concluída."
 
 run-folder-brkga: $(TARGET_BRKGA)
 	@if [ -z "$(FOLDER)" ]; then \
@@ -136,9 +140,9 @@ run-folder-brkga: $(TARGET_BRKGA)
 	fi; \
 	echo "==> Processando instâncias de: $$CREATOR_NAME (em $$INST_SUBDIR) com BRKGA"; \
 	mkdir -p "$$RESULT_SUBDIR"; \
-	for i in $$(seq 0 1); do \
+	for i in $$(seq 0 4); do \
 		echo "    ==> Iniciando Rodada Mestra $$i (executando todos os arquivos 1x)..."; \
-		find "$$INST_SUBDIR" -name '*.txt' | while read file; do \
+		find "$$INST_SUBDIR" -name '*.txt' | sort -V | while read file; do \
 			echo "        --> Processando $$file (Rodada $$i)"; \
 			./$(TARGET_BRKGA) "$$file" --INST $$i --OUTDIR "$$RESULT_SUBDIR"; \
 		done; \

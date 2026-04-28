@@ -59,6 +59,13 @@ class MOSP: public Problem<solMOSP>{
 		solMOSP neighbor2Opt(solMOSP sol);
 		solMOSP neighborInsertion(solMOSP sol);
 		double evaluate(solMOSP& sol);
+
+		// Getters for VND
+		int getNumberPieces() { return numberPieces; }
+		int getNumberPatterns() { return numberPatterns; }
+		const std::vector<int>& getStackSizeEvaluation() { return stackSizeEvaluation; }
+		const std::vector<std::vector<int>>& getPatternPieces() { return patternPieces; }
+		const std::vector<std::bitset<1000>>& getPatternBitsets() { return patternBitsets; }
 };
 
 #endif 

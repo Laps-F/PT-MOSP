@@ -330,8 +330,8 @@ def main():
             # --- MODO 2: LÓGICA DE LOTE ATUALIZADA ---
             elif len(sys.argv) == 1:
                 # Mantém os mesmos caminhos que você definiu
-                pasta_entrada = Path("../../Instances/SCOOP")
-                pasta_solucao = Path("../Results2/SCOOP/BRKGA")
+                pasta_entrada = Path("../../Instances/Frinhani")
+                pasta_solucao = Path("../Results2/Frinhani/BRKGA")
                 
                 if not pasta_entrada.is_dir():
                     print(f"Erro: Pasta de instâncias não encontrada: {pasta_entrada}", file=sys.stderr)
