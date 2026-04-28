@@ -34,8 +34,8 @@ Instance ReadInstance() {
 
     inst.pattern_contains_piece.assign(inst.num_products, std::vector<bool>(inst.num_customers, false));
 
-    for (int c = 0; c < inst.num_customers; ++c) {
-        for (int p = 0; p < inst.num_products; ++p) {
+    for (int p = 0; p < inst.num_products; ++p) {
+        for (int c = 0; c < inst.num_customers; ++c) {
             int val;
             std::cin >> val;
             if (val == 1) {
@@ -283,6 +283,106 @@ Solution NVND(Solution initial_solution, const Instance& inst) {
 }
 
 // ========================================================================
+// GERAÇÃO DOS VIZINHOS (JANELAS DESLIZANTES - NSD)
+// ========================================================================
+
+// Gera todos os pares de índices de início de janelas que NÃO se sobrepõem
+std::vector<std::pair<int, int>> GenerateWindowPairs(int num_patterns, int omega) {
+    std::vector<std::pair<int, int>> pairs;
+    // A primeira janela começa no índice 'i'
+    for (int i = 0; i <= num_patterns - omega; ++i) {
+        // A segunda janela começa no índice 'j', pulando 'omega' casas para evitar sobreposição
+        for (int j = i + omega; j <= num_patterns - omega; ++j) {
+            pairs.push_back({i, j});
+        }
+    }
+    return pairs;
+}
+
+// Troca os padrões de duas janelas (de tamanho omega) na sequência
+Solution ApplyWindowSwap(const Solution& s, int idx1, int idx2, int omega) {
+    Solution s_linha = s;
+    for (int k = 0; k < omega; ++k) {
+        std::swap(s_linha.sequencia_de_padroes[idx1 + k], s_linha.sequencia_de_padroes[idx2 + k]);
+    }
+    return s_linha;
+}
+
+// ========================================================================
+// ALGORITHM 3: NSD (Nested Steepest Descent)
+// ========================================================================
+Solution NSD(Solution initial_solution, const Instance& inst) {
+    Solution s = initial_solution;
+    bool improvement;
+    
+    // Parâmetros do NSD (conforme o artigo)
+    int omega = 2; // Tamanho da janela deslizante
+    int nsd_iteration = 1;
+    
+    std::random_device rd;
+    std::mt19937 rng(rd());
+
+    // --- PAINEL INICIAL DE DEBUG ---
+    std::cout << "\n============================================" << std::endl;
+    std::cout << "=== INICIANDO OTIMIZACAO NSD ===" << std::endl;
+    std::cout << "============================================" << std::endl;
+    std::cout << "-> Clientes (Pilhas): " << inst.num_customers << std::endl;
+    std::cout << "-> Padroes (Estagios): " << inst.num_products << std::endl;
+    std::cout << "-> Tamanho da Janela (omega): " << omega << std::endl;
+    std::cout << "-> Custo (Z_MOSP) Inicial: " << s.cost << std::endl;
+    std::cout << "============================================\n" << std::endl;
+
+    do {
+        std::cout << "\n[Iteracao NSD: " << nsd_iteration++ << "] Custo Atual: " << s.cost << std::endl;
+        improvement = false;
+        
+        // 1. Gera todas as combinações de 2 janelas que não compartilham padrões
+        std::vector<std::pair<int, int>> window_pairs = GenerateWindowPairs(s.sequencia_de_padroes.size(), omega);
+        std::cout << "  -> Explorando Vizinhanca 2-swap (" << window_pairs.size() << " pares de janelas disponiveis)" << std::endl;
+        
+        // Randomiza a ordem (mantendo a estratégia First-Improvement)
+        std::shuffle(window_pairs.begin(), window_pairs.end(), rng);
+
+        int eval_count = 0;
+        for (const auto& wp : window_pairs) {
+            eval_count++;
+            
+            if (eval_count % 500 == 0) {
+                std::cout << "    Testando vizinho " << eval_count << " de " << window_pairs.size() << "...\r";
+                std::cout.flush();
+            }
+
+            // Aplica a troca de janelas
+            Solution s_linha = ApplyWindowSwap(s, wp.first, wp.second, omega);
+            s_linha.cost = EvaluateCost(s_linha, inst);
+            
+            // Aplica a busca local cirúrgica do gargalo
+            s_linha = ReduceC1s(s_linha, inst);
+            
+            if (s_linha.cost < s.cost) {
+                std::cout << "                                                                 \r"; 
+                std::cout << "    *** FIRST-IMPROVEMENT ACEITO! Custo Global caiu de " << s.cost << " para " << s_linha.cost << " ***" << std::endl;
+                s = s_linha;
+                improvement = true;
+                break; // Achou melhora, atualiza a solução base e recomeça as janelas
+            }
+        }
+        
+        if (!improvement && window_pairs.size() >= 500) {
+             std::cout << "                                                                 \r";
+        }
+        
+        if (!improvement) {
+            std::cout << "  -> Sem melhoria. NSD finalizado." << std::endl;
+        }
+        
+    } while (improvement);
+
+    std::cout << "\n=== Fim do NSD (Otimo Local Alcancado) ===" << std::endl;
+    return s;
+}
+
+// ========================================================================
 // MAIN
 // ========================================================================
 int main() {
@@ -298,7 +398,7 @@ int main() {
     std::cout << "Custo inicial trivial: " << initial_solution.cost << std::endl;
 
     // 3. Executa o NVND
-    Solution best_solution = NVND(initial_solution, inst);
+    Solution best_solution = NSD(initial_solution, inst);
 
     // 4. Exibe os resultados
     std::cout << "Melhor custo encontrado: " << best_solution.cost << std::endl;

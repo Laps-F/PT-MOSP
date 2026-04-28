@@ -2653,3 +2653,9 @@ BRKGA START: instance='../Instances/Frinhani/Dataset_Description - Frinhani, Car
 Killed
         --> Processando ../Instances/Frinhani/Random-600-600-14-8.txt (Rodada 0)
 BRKGA START: instance='../Instances/Frinhani/Random-600-600-14-8.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-600-600-14-9.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-14-9.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-600-600-14-10.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-14-10.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
