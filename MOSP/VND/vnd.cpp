@@ -1,18 +1,22 @@
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <algorithm>
 #include <set>
 #include <numeric>
 #include <random>
 #include <string>
+#include <chrono>
+#include <filesystem>
+#include "results.h"
+
+// Atalho para facilitar a passagem de tempo
+using TimePoint = std::chrono::time_point<std::chrono::high_resolution_clock>;
 
 // Estrutura genérica simulando os dados da instância (Matriz M)
 struct Instance {
     int num_customers; // Peças/Pilhas
     int num_products;  // Padrões/Estágios
-    
-    // pattern_contains_piece[p][c] == true se o produto 'p' atende o cliente 'c'
-    // Note: Em C++, os índices começarão em 0.
     std::vector<std::vector<bool>> pattern_contains_piece; 
 };
 
@@ -25,35 +29,45 @@ struct Solution {
 // ========================================================================
 // LEITURA DA INSTÂNCIA
 // ========================================================================
-Instance ReadInstance() {
-    Instance inst;
-    if (!(std::cin >> inst.num_customers >> inst.num_products)) {
-        std::cerr << "Erro ao ler as dimensoes." << std::endl;
-        exit(1);
+bool ReadInstanceFromFile(const std::string& filename, Instance& inst) {
+    std::ifstream file(filename);
+    if (!file.is_open()) {
+        std::cerr << "Erro ao abrir o arquivo: " << filename << std::endl;
+        return false;
     }
 
+    file >> inst.num_customers >> inst.num_products;
     inst.pattern_contains_piece.assign(inst.num_products, std::vector<bool>(inst.num_customers, false));
 
-    for (int p = 0; p < inst.num_products; ++p) {
-        for (int c = 0; c < inst.num_customers; ++c) {
-            int val;
-            std::cin >> val;
+    int val;
+        for (int j = 0; j < inst.num_products; ++j) {
+    for (int i = 0; i < inst.num_customers; ++i) {
+            file >> val;
             if (val == 1) {
-                inst.pattern_contains_piece[p][c] = true;
+                inst.pattern_contains_piece[j][i] = true;
             }
         }
     }
-    return inst;
+
+    file.close();
+    return true;
 }
 
 // ========================================================================
-// AVALIAÇÃO DO CUSTO (O CÁLCULO DE PILHAS ABERTAS)
+// Função utilitária para checar o tempo
 // ========================================================================
-// Calcula o máximo de pilhas abertas simultaneamente para uma dada sequência
+bool IsTimeUp(TimePoint start_time, double time_limit) {
+    if (time_limit <= 0.0) return false;
+    auto current_time = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> elapsed = current_time - start_time;
+    return elapsed.count() >= time_limit;
+}
+
+// ========================================================================
+// AVALIAÇÃO DO CUSTO
+// ========================================================================
 int EvaluateCost(const Solution& s, const Instance& inst) {
     int max_open_stacks = 0;
-    
-    // Para cada cliente (peça), descobrimos em qual estágio a pilha abre e fecha
     std::vector<int> first_stage(inst.num_customers, -1);
     std::vector<int> last_stage(inst.num_customers, -1);
 
@@ -61,15 +75,12 @@ int EvaluateCost(const Solution& s, const Instance& inst) {
         int current_pattern = s.sequencia_de_padroes[stage];
         for (int c = 0; c < inst.num_customers; ++c) {
             if (inst.pattern_contains_piece[current_pattern][c]) {
-                if (first_stage[c] == -1) {
-                    first_stage[c] = stage; // Pilha abriu
-                }
-                last_stage[c] = stage; // Atualiza o fechamento para o estágio mais recente visto
+                if (first_stage[c] == -1) first_stage[c] = stage; 
+                last_stage[c] = stage; 
             }
         }
     }
 
-    // Agora, para cada estágio, contamos quantas pilhas estão abertas (propriedade dos 1s consecutivos)
     for (int stage = 0; stage < inst.num_products; ++stage) {
         int current_open_stacks = 0;
         for (int c = 0; c < inst.num_customers; ++c) {
@@ -88,11 +99,8 @@ int EvaluateCost(const Solution& s, const Instance& inst) {
 // ========================================================================
 // BUSCA LOCAL CIRÚRGICA (REDUCE C1S)
 // ========================================================================
-
-// Retorna o conjunto G de peças que compõem o gargalo
 std::set<int> GetBottleneckPieces(const Solution& s, const Instance& inst) {
     std::set<int> G;
-    
     std::vector<int> first_stage(inst.num_customers, -1);
     std::vector<int> last_stage(inst.num_customers, -1);
 
@@ -106,19 +114,15 @@ std::set<int> GetBottleneckPieces(const Solution& s, const Instance& inst) {
         }
     }
 
-    // Identifica o(s) estágio(s) gargalo
     for (int stage = 0; stage < inst.num_products; ++stage) {
         int current_open_stacks = 0;
         std::set<int> active_pieces;
-        
         for (int c = 0; c < inst.num_customers; ++c) {
             if (first_stage[c] != -1 && stage >= first_stage[c] && stage <= last_stage[c]) {
                 current_open_stacks++;
                 active_pieces.insert(c);
             }
         }
-        
-        // Se este estágio atinge o custo máximo, as peças dele fazem parte do gargalo
         if (current_open_stacks == s.cost) {
             G.insert(active_pieces.begin(), active_pieces.end());
         }
@@ -126,30 +130,27 @@ std::set<int> GetBottleneckPieces(const Solution& s, const Instance& inst) {
     return G;
 }
 
-// Calcula a similaridade de um padrão p com o conjunto de gargalo G
 int CalculateSimilarity(int pattern, const std::set<int>& G, const Instance& inst) {
     int similarity = 0;
     for (int piece : G) {
-        if (inst.pattern_contains_piece[pattern][piece]) {
-            similarity++;
-        }
+        if (inst.pattern_contains_piece[pattern][piece]) similarity++;
     }
     return similarity;
 }
 
-// Algorithm 1: ReduceC1s
-Solution ReduceC1s(Solution s, const Instance& inst) {
+Solution ReduceC1s(Solution s, const Instance& inst, TimePoint start_time, double time_limit) {
     bool improvement;
     do {
         improvement = false;
+        
+        // Checagem de tempo
+        if (IsTimeUp(start_time, time_limit)) break;
         
         std::set<int> G = GetBottleneckPieces(s, inst);
         
         std::vector<int> L;
         for (int p : s.sequencia_de_padroes) {
-            if (CalculateSimilarity(p, G, inst) > 0) {
-                L.push_back(p);
-            }
+            if (CalculateSimilarity(p, G, inst) > 0) L.push_back(p);
         }
         
         std::sort(L.begin(), L.end(), [&](int p1, int p2) {
@@ -157,12 +158,15 @@ Solution ReduceC1s(Solution s, const Instance& inst) {
         });
         
         for (int p : L) {
+            // Checagem de tempo no laço interno
+            if (IsTimeUp(start_time, time_limit)) break;
+
             auto it = std::find(s.sequencia_de_padroes.begin(), s.sequencia_de_padroes.end(), p);
             if (it != s.sequencia_de_padroes.end()) {
                 s.sequencia_de_padroes.erase(it);
             }
             
-            Solution best_insertion = s; // Cópia de segurança caso não melhore
+            Solution best_insertion = s; 
             best_insertion.cost = 999999;
             
             for (size_t i = 0; i <= s.sequencia_de_padroes.size(); ++i) {
@@ -188,9 +192,8 @@ Solution ReduceC1s(Solution s, const Instance& inst) {
 }
 
 // ========================================================================
-// GERAÇÃO DOS VIZINHOS (K-SWAP AGRUPADO)
+// GERAÇÃO DOS VIZINHOS (K-SWAP AGRUPADO E NVND)
 // ========================================================================
-// Helper: Gera combinações (N escolhe K) de grupos
 void CombinationsHelper(int n, int k, int start, std::vector<int>& current, std::vector<std::vector<int>>& result) {
     if (current.size() == k) {
         result.push_back(current);
@@ -228,55 +231,49 @@ Solution ApplySwap(const Solution& s, const std::vector<int>& selected_groups, i
     return s_linha;
 }
 
-// ========================================================================
-// ALGORITHM 2: NVND
-// ========================================================================
-Solution NVND(Solution initial_solution, const Instance& inst) {
+Solution NVND(Solution initial_solution, const Instance& inst, bool verbose, TimePoint start_time, double time_limit) {
     Solution s = initial_solution;
     bool improvement;
-    
-    int gamma = 2; // Tamanho dos grupos
-    int k_max = 5; // Limite do K-swap
+    int gamma = 2; 
+    int k_max = 5; 
     
     std::random_device rd;
     std::mt19937 rng(rd());
 
     do {
+        if (IsTimeUp(start_time, time_limit)) {
+            if(verbose) std::cout << "\n[!] Tempo limite de " << time_limit << "s atingido! Abortando NVND." << std::endl;
+            break;
+        }
+
         int k = 2; 
         improvement = false;
         int num_groups = s.sequencia_de_padroes.size() / gamma;
 
         while (k <= k_max && k <= num_groups) {
+            if (IsTimeUp(start_time, time_limit)) break;
+
             bool found_better_in_k = false;
-            
-            // 1. Gera todas as combinações de troca de k grupos
             std::vector<std::vector<int>> all_possible_swaps = GenerateCombinations(num_groups, k);
-            
-            // 2. Explora randomicamente (First-Improvement)
             std::shuffle(all_possible_swaps.begin(), all_possible_swaps.end(), rng);
 
             for (const auto& swap_combination : all_possible_swaps) {
-                // Aplica o swap
+                if (IsTimeUp(start_time, time_limit)) break;
+
                 Solution s_linha = ApplySwap(s, swap_combination, gamma, rng);
                 s_linha.cost = EvaluateCost(s_linha, inst);
-                
-                // Aplica a busca cirúrgica
-                s_linha = ReduceC1s(s_linha, inst);
+                s_linha = ReduceC1s(s_linha, inst, start_time, time_limit);
                 
                 if (s_linha.cost < s.cost) {
                     s = s_linha;
                     improvement = true;
                     found_better_in_k = true;
-                    break; // First improvement
+                    break;
                 }
             }
-            
-            if (found_better_in_k) {
-                break; // Volta para k=2 no do-while externo
-            }
+            if (found_better_in_k) break; 
             k++; 
         }
-        
     } while (improvement);
 
     return s;
@@ -285,13 +282,9 @@ Solution NVND(Solution initial_solution, const Instance& inst) {
 // ========================================================================
 // GERAÇÃO DOS VIZINHOS (JANELAS DESLIZANTES - NSD)
 // ========================================================================
-
-// Gera todos os pares de índices de início de janelas que NÃO se sobrepõem
 std::vector<std::pair<int, int>> GenerateWindowPairs(int num_patterns, int omega) {
     std::vector<std::pair<int, int>> pairs;
-    // A primeira janela começa no índice 'i'
     for (int i = 0; i <= num_patterns - omega; ++i) {
-        // A segunda janela começa no índice 'j', pulando 'omega' casas para evitar sobreposição
         for (int j = i + omega; j <= num_patterns - omega; ++j) {
             pairs.push_back({i, j});
         }
@@ -299,7 +292,6 @@ std::vector<std::pair<int, int>> GenerateWindowPairs(int num_patterns, int omega
     return pairs;
 }
 
-// Troca os padrões de duas janelas (de tamanho omega) na sequência
 Solution ApplyWindowSwap(const Solution& s, int idx1, int idx2, int omega) {
     Solution s_linha = s;
     for (int k = 0; k < omega; ++k) {
@@ -308,105 +300,127 @@ Solution ApplyWindowSwap(const Solution& s, int idx1, int idx2, int omega) {
     return s_linha;
 }
 
-// ========================================================================
-// ALGORITHM 3: NSD (Nested Steepest Descent)
-// ========================================================================
-Solution NSD(Solution initial_solution, const Instance& inst) {
+Solution NSD(Solution initial_solution, const Instance& inst, bool verbose, TimePoint start_time, double time_limit) {
     Solution s = initial_solution;
     bool improvement;
-    
-    // Parâmetros do NSD (conforme o artigo)
-    int omega = 2; // Tamanho da janela deslizante
+    int omega = 2; 
     int nsd_iteration = 1;
     
     std::random_device rd;
     std::mt19937 rng(rd());
 
-    // --- PAINEL INICIAL DE DEBUG ---
-    std::cout << "\n============================================" << std::endl;
-    std::cout << "=== INICIANDO OTIMIZACAO NSD ===" << std::endl;
-    std::cout << "============================================" << std::endl;
-    std::cout << "-> Clientes (Pilhas): " << inst.num_customers << std::endl;
-    std::cout << "-> Padroes (Estagios): " << inst.num_products << std::endl;
-    std::cout << "-> Tamanho da Janela (omega): " << omega << std::endl;
-    std::cout << "-> Custo (Z_MOSP) Inicial: " << s.cost << std::endl;
-    std::cout << "============================================\n" << std::endl;
+    if(verbose){
+        std::cout << "\n============================================" << std::endl;
+        std::cout << "=== INICIANDO OTIMIZACAO NSD ===" << std::endl;
+        std::cout << "-> Clientes (Pilhas): " << inst.num_customers << std::endl;
+        std::cout << "-> Padroes (Estagios): " << inst.num_products << std::endl;
+        std::cout << "-> Custo Inicial: " << s.cost << std::endl;
+        std::cout << "-> Tempo Limite: " << time_limit << "s" << std::endl;
+        std::cout << "============================================\n" << std::endl;
+    }
 
     do {
-        std::cout << "\n[Iteracao NSD: " << nsd_iteration++ << "] Custo Atual: " << s.cost << std::endl;
+        // Checagem no início da iteração NSD
+        if (IsTimeUp(start_time, time_limit)) {
+            if(verbose) std::cout << "\n[!] Tempo limite de " << time_limit << "s atingido! Abortando NSD." << std::endl;
+            break;
+        }
+
+        if(verbose) std::cout << "\n[Iteracao NSD: " << nsd_iteration++ << "] Custo Atual: " << s.cost << std::endl;
         improvement = false;
         
-        // 1. Gera todas as combinações de 2 janelas que não compartilham padrões
         std::vector<std::pair<int, int>> window_pairs = GenerateWindowPairs(s.sequencia_de_padroes.size(), omega);
-        std::cout << "  -> Explorando Vizinhanca 2-swap (" << window_pairs.size() << " pares de janelas disponiveis)" << std::endl;
-        
-        // Randomiza a ordem (mantendo a estratégia First-Improvement)
         std::shuffle(window_pairs.begin(), window_pairs.end(), rng);
 
-        int eval_count = 0;
         for (const auto& wp : window_pairs) {
-            eval_count++;
-            
-            if (eval_count % 500 == 0) {
-                std::cout << "    Testando vizinho " << eval_count << " de " << window_pairs.size() << "...\r";
-                std::cout.flush();
+            // Checagem rigorosa a cada par de janela avaliado!
+            if (IsTimeUp(start_time, time_limit)) {
+                improvement = false; // Garante a quebra do laço do-while externo
+                break;
             }
-
-            // Aplica a troca de janelas
+            
             Solution s_linha = ApplyWindowSwap(s, wp.first, wp.second, omega);
             s_linha.cost = EvaluateCost(s_linha, inst);
             
-            // Aplica a busca local cirúrgica do gargalo
-            s_linha = ReduceC1s(s_linha, inst);
+            // O ReduceC1s também tem a própria checagem de tempo interna
+            s_linha = ReduceC1s(s_linha, inst, start_time, time_limit);
             
             if (s_linha.cost < s.cost) {
-                std::cout << "                                                                 \r"; 
-                std::cout << "    *** FIRST-IMPROVEMENT ACEITO! Custo Global caiu de " << s.cost << " para " << s_linha.cost << " ***" << std::endl;
+                if(verbose) {
+                    std::cout << "    *** FIRST-IMPROVEMENT ACEITO! Custo caiu para " << s_linha.cost << " ***" << std::endl;
+                }
                 s = s_linha;
                 improvement = true;
-                break; // Achou melhora, atualiza a solução base e recomeça as janelas
+                break; 
             }
         }
-        
-        if (!improvement && window_pairs.size() >= 500) {
-             std::cout << "                                                                 \r";
-        }
-        
-        if (!improvement) {
-            std::cout << "  -> Sem melhoria. NSD finalizado." << std::endl;
-        }
-        
     } while (improvement);
 
-    std::cout << "\n=== Fim do NSD (Otimo Local Alcancado) ===" << std::endl;
+    if(verbose) std::cout << "\n=== Fim do NSD ===" << std::endl;
     return s;
 }
 
 // ========================================================================
-// MAIN
+// MAIN (CLI Equivalente ao BRKGA)
 // ========================================================================
-int main() {
-    // 1. Lê a instância via entrada padrão (stdin)
-    Instance inst = ReadInstance();
+int main(int argc, char* argv[]) {
+    // Inicia o relógio O MAIS CEDO POSSÍVEL para contar o tempo real de execução
+    auto start_time = std::chrono::high_resolution_clock::now();
 
-    // 2. Solução Inicial trivial (ordem 0, 1, 2... N-1)
+    if (argc < 2) {
+        std::cerr << "Uso: ./mainVND <caminho_para_instancia> [--INST <instance>] [--OUTDIR <outdir>] [--VERBOSE <0|1>] [--TIME_LIMIT <seconds>]" << std::endl;
+        return 1;
+    }
+
+    int exec = 0;
+    std::string outDir = "resultados";
+    bool verbose = false;
+    double time_limit = 1080.0; // Padrão: 18 minutos
+
+    std::vector<std::string> arguments(argv + 1, argv + argc);
+    std::string fn = arguments[0];
+
+    // Read arguments
+    for (size_t i = 1; i < arguments.size(); i += 2) {
+        if (arguments[i] == "--INST")
+            exec = std::stoi(arguments[i + 1]);
+        else if (arguments[i] == "--OUTDIR")
+            outDir = arguments[i + 1];
+        else if (arguments[i] == "--VERBOSE")
+            verbose = (std::stoi(arguments[i + 1]) != 0);
+        else if (arguments[i] == "--TIME_LIMIT")
+            time_limit = std::stod(arguments[i + 1]);
+    }
+
+    std::filesystem::create_directories(outDir + "/VND");
+    outDir += "/VND";
+
+    Instance inst;
+    if (!ReadInstanceFromFile(fn, inst)) {
+        return 1;
+    }
+
+    // Solução Inicial trivial (ordem 0, 1, 2... N-1)
     Solution initial_solution;
     initial_solution.sequencia_de_padroes.resize(inst.num_products);
     std::iota(initial_solution.sequencia_de_padroes.begin(), initial_solution.sequencia_de_padroes.end(), 0);
     initial_solution.cost = EvaluateCost(initial_solution, inst);
 
-    std::cout << "Custo inicial trivial: " << initial_solution.cost << std::endl;
+    // Executa o VND passando o tempo de início e o limite
+    Solution best_solution = NSD(initial_solution, inst, verbose, start_time, time_limit);
 
-    // 3. Executa o NVND
-    Solution best_solution = NSD(initial_solution, inst);
+    auto end_time = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double, std::milli> elapsed = end_time - start_time;
 
-    // 4. Exibe os resultados
-    std::cout << "Melhor custo encontrado: " << best_solution.cost << std::endl;
-    std::cout << "Sequencia final: ";
-    for (int p : best_solution.sequencia_de_padroes) {
-        std::cout << p + 1 << " "; // +1 apenas para alinhar com o formato humano (1 a P)
-    }
-    std::cout << std::endl;
+    // Extrai resultados
+    SolResult res;
+    res.evalSol = best_solution.cost;
+    res.maxNumberPiecesPerPatern = 0;
+    res.sol = best_solution.sequencia_de_padroes;
+    int trocas = 0; 
+
+    // Salva resultados via results.h
+    saveResults(fn, res, static_cast<int>(elapsed.count()), trocas, outDir, exec, 2);
 
     return 0;
 }

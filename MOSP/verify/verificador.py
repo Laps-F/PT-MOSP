@@ -102,8 +102,8 @@ class SolutionChecker:
 
                 # Popula patternPieces (lendo coluna por coluna - Formato 0)
                 val_idx = 0
-                for i in range(self.numberPieces):
-                    for j in range(self.numberPatterns):
+                for j in range(self.numberPatterns):
+                    for i in range(self.numberPieces):
                         if val_idx < len(matrix_values) and matrix_values[val_idx] == 1:
                             self.patternPieces[j].append(i)
                         val_idx += 1
@@ -330,8 +330,8 @@ def main():
             # --- MODO 2: LÓGICA DE LOTE ATUALIZADA ---
             elif len(sys.argv) == 1:
                 # Mantém os mesmos caminhos que você definiu
-                pasta_entrada = Path("../../Instances/Frinhani")
-                pasta_solucao = Path("../Results2/Frinhani/BRKGA")
+                pasta_entrada = Path("../../Instances/Challenge")
+                pasta_solucao = Path("../Results2/Challenge/VND")
                 
                 if not pasta_entrada.is_dir():
                     print(f"Erro: Pasta de instâncias não encontrada: {pasta_entrada}", file=sys.stderr)

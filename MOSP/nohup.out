@@ -2659,3 +2659,811 @@ BRKGA START: instance='../Instances/Frinhani/Random-600-600-14-9.txt' m=600 n=60
 Time limit reached at generation 1
         --> Processando ../Instances/Frinhani/Random-600-600-14-10.txt (Rodada 0)
 BRKGA START: instance='../Instances/Frinhani/Random-600-600-14-10.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-600-600-18-1.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-18-1.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-600-600-18-2.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-18-2.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-600-600-18-3.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-18-3.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-600-600-18-4.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-18-4.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-600-600-18-5.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-18-5.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-600-600-18-6.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-18-6.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-600-600-18-7.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-18-7.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-600-600-18-8.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-18-8.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+make: *** [Makefile:129: run-folder-brkga] Terminated
+DEBUG: FOLDER='Frinhani'
+==> Processando instâncias de: Frinhani (em ../Instances/Frinhani) com BRKGA
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt' m=0 n=0 pop=0 pe=0 pm=0 gens=100 time_limit=1080s threads=12
+terminate called after throwing an instance of 'std::range_error'
+  what():  Chromosome size equals zero.
+Aborted (core dumped)
+        --> Processando ../Instances/Frinhani/Random-600-600-18-8.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-18-8.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-18-9.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-18-9.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-18-10.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-18-10.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-20-1.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-20-1.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-20-2.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-20-2.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-20-3.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-20-3.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-20-4.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-20-4.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-20-5.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-20-5.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-20-6.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-20-6.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-20-7.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-20-7.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-20-8.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-20-8.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-20-9.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-20-9.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-20-10.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-20-10.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-24-1.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-24-1.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-24-2.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-24-2.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-24-3.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-24-3.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-24-4.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-24-4.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-24-5.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-24-5.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-24-6.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-24-6.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-24-7.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-24-7.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-24-8.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-24-8.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-24-9.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-24-9.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-24-10.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-24-10.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-28-1.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-28-1.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-28-2.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-28-2.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-28-3.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-28-3.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-28-4.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-28-4.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-28-5.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-28-5.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-28-6.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-28-6.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-28-7.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-28-7.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-28-8.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-28-8.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-28-9.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-28-9.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-28-10.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-28-10.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-30-1.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-30-1.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-30-2.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-30-2.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-30-3.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-30-3.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-30-4.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-30-4.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-30-5.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-30-5.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-30-6.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-30-6.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-30-7.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-30-7.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-30-8.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-30-8.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-30-9.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-30-9.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-30-10.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-30-10.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-34-1.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-34-1.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-34-2.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-34-2.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-34-3.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-34-3.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-34-4.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-34-4.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-34-5.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-34-5.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-34-6.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-34-6.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-34-7.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-34-7.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-34-8.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-34-8.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-34-9.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-34-9.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-34-10.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-34-10.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-38-1.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-38-1.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-38-2.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-38-2.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-38-3.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-38-3.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-38-4.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-38-4.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-38-5.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-38-5.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-38-6.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-38-6.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-38-7.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-38-7.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-38-8.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-38-8.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-38-9.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-38-9.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-38-10.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-38-10.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-40-1.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-40-1.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-40-2.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-40-2.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-40-3.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-40-3.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-40-4.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-40-4.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-40-5.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-40-5.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-40-6.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-40-6.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-40-7.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-40-7.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-40-8.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-40-8.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-40-9.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-40-9.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-40-10.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-40-10.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-800-800-2-1.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-2-1.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-2-2.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-2-2.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-2-3.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-2-3.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-2-4.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-2-4.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-2-5.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-2-5.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-2-6.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-2-6.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-2-7.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-2-7.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-2-8.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-2-8.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-2-9.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-2-9.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-2-10.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-2-10.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-4-1.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-4-1.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-4-2.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-4-2.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-4-3.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-4-3.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-4-4.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-4-4.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-4-5.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-4-5.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-4-6.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-4-6.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-4-7.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-4-7.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-4-8.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-4-8.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-4-9.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-4-9.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-4-10.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-4-10.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-6-1.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-6-1.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-6-2.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-6-2.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-6-3.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-6-3.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-6-4.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-6-4.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-6-5.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-6-5.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-6-6.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-6-6.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-6-7.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-6-7.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-6-8.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-6-8.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-6-9.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-6-9.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-6-10.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-6-10.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-8-1.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-8-1.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-8-2.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-8-2.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-8-3.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-8-3.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-8-4.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-8-4.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-8-5.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-8-5.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-8-6.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-8-6.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-8-7.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-8-7.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-8-8.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-8-8.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-8-9.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-8-9.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-8-10.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-8-10.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-10-1.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-10-1.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-10-2.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-10-2.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-10-3.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-10-3.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-10-4.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-10-4.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-10-5.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-10-5.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-10-6.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-10-6.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-10-7.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-10-7.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-10-8.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-10-8.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-10-9.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-10-9.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-10-10.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-10-10.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-14-1.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-14-1.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-14-2.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-14-2.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-14-3.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-14-3.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-14-4.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-14-4.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-14-5.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-14-5.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-14-6.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-14-6.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-14-7.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-14-7.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-14-8.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-14-8.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-14-9.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-14-9.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-14-10.txt (Rodada 0)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-14-10.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+    ==> Rodada Mestra 0 concluída.
+    ==> Iniciando Rodada Mestra 1 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt' m=163840 n=0 pop=1638400 pe=50 pm=327680 gens=100 time_limit=1080s threads=12
+Killed
+        --> Processando ../Instances/Frinhani/Random-600-600-18-8.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-18-8.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-18-9.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-18-9.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-18-10.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-18-10.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-20-1.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-20-1.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-20-2.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-20-2.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-20-3.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-20-3.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-20-4.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-20-4.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-20-5.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-20-5.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-20-6.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-20-6.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-20-7.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-20-7.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-20-8.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-20-8.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-20-9.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-20-9.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-20-10.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-20-10.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-24-1.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-24-1.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-24-2.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-24-2.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-24-3.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-24-3.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-24-4.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-24-4.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-24-5.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-24-5.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-24-6.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-24-6.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-24-7.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-24-7.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-24-8.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-24-8.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-24-9.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-24-9.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-24-10.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-24-10.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-28-1.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-28-1.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-28-2.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-28-2.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-28-3.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-28-3.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-28-4.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-28-4.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-28-5.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-28-5.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-28-6.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-28-6.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-28-7.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-28-7.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-28-8.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-28-8.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-28-9.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-28-9.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-28-10.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-28-10.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-30-1.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-30-1.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-30-2.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-30-2.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-30-3.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-30-3.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-30-4.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-30-4.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-30-5.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-30-5.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-30-6.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-30-6.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-30-7.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-30-7.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-30-8.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-30-8.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-30-9.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-30-9.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-30-10.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-30-10.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-34-1.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-34-1.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-34-2.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-34-2.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-34-3.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-34-3.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-34-4.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-34-4.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-34-5.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-34-5.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-34-6.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-34-6.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-34-7.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-34-7.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-34-8.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-34-8.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-34-9.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-34-9.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-34-10.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-34-10.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-38-1.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-38-1.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-38-2.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-38-2.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-38-3.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-38-3.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-38-4.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-38-4.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-38-5.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-38-5.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-38-6.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-38-6.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-38-7.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-38-7.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-38-8.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-38-8.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-38-9.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-38-9.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-38-10.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-38-10.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-40-1.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-40-1.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-40-2.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-40-2.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-40-3.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-40-3.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-40-4.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-40-4.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-40-5.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-40-5.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-40-6.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-40-6.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-40-7.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-40-7.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-40-8.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-40-8.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-40-9.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-40-9.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-600-600-40-10.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-600-600-40-10.txt' m=600 n=600 pop=6000 pe=50 pm=1200 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 5
+        --> Processando ../Instances/Frinhani/Random-800-800-2-1.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-2-1.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-2-2.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-2-2.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-2-3.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-2-3.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-2-4.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-2-4.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-2-5.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-2-5.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-2-6.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-2-6.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+Time limit reached at generation 1
+        --> Processando ../Instances/Frinhani/Random-800-800-2-7.txt (Rodada 1)
+BRKGA START: instance='../Instances/Frinhani/Random-800-800-2-7.txt' m=800 n=800 pop=8000 pe=50 pm=1600 gens=100 time_limit=1080s threads=12
+make: *** [Makefile:129: run-folder-brkga] Terminated
+DEBUG: FOLDER='Frinhani'
+==> Processando instâncias de: Frinhani (em ../Instances/Frinhani) com VND
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt (Rodada 0)
+        --> Processando ../Instances/Frinhani/Random-600-600-18-8.txt (Rodada 0)
+DEBUG: FOLDER='Frinhani'
+==> Processando instâncias de: Frinhani (em ../Instances/Frinhani) com VND
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt (Rodada 0)
+        --> Processando ../Instances/Frinhani/Random-600-600-18-8.txt (Rodada 0)
+make: *** [Makefile:189: run-folder-vnd] Terminated
+make: *** [Makefile:189: run-folder-vnd] Terminated
+g++  VND/vnd.cpp -I. -std=c++20 -Wshadow -Wall -g -O3 -Wno-unused-result -lpthread -march=native -o mainVND 
+VND/vnd.cpp: In function ‘void CombinationsHelper(int, int, int, std::vector<int>&, std::vector<std::vector<int> >&)’:
+VND/vnd.cpp:198:24: warning: comparison of integer expressions of different signedness: ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+  198 |     if (current.size() == k) {
+      |         ~~~~~~~~~~~~~~~^~~~
+VND/vnd.cpp: In function ‘Solution ApplySwap(const Solution&, const std::vector<int>&, int, std::mt19937&)’:
+VND/vnd.cpp:226:34: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  226 |             if (original_idx + j < s.sequencia_de_padroes.size() && new_idx + j < s.sequencia_de_padroes.size()) {
+      |                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+VND/vnd.cpp:226:81: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  226 |             if (original_idx + j < s.sequencia_de_padroes.size() && new_idx + j < s.sequencia_de_padroes.size()) {
+      |                                                                     ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DEBUG: FOLDER='Frinhani'
+==> Processando instâncias de: Frinhani (em ../Instances/Frinhani) com VND
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt (Rodada 0)
+        --> Processando ../Instances/Frinhani/Random-600-600-18-8.txt (Rodada 0)
+DEBUG: FOLDER='Frinhani'
+==> Processando instâncias de: Frinhani (em ../Instances/Frinhani) com VND
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt (Rodada 0)
+        --> Processando ../Instances/Frinhani/Random-600-600-18-8.txt (Rodada 0)
+DEBUG: FOLDER='Frinhani'
+==> Processando instâncias de: Frinhani (em ../Instances/Frinhani) com VND
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt (Rodada 0)
+        --> Processando ../Instances/Frinhani/Random-600-600-18-8.txt (Rodada 0)
+DEBUG: FOLDER='Frinhani'
+==> Processando instâncias de: Frinhani (em ../Instances/Frinhani) com VND
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt (Rodada 0)
+        --> Processando ../Instances/Frinhani/Random-600-600-18-8.txt (Rodada 0)
+DEBUG: FOLDER='Frinhani'
+==> Processando instâncias de: Frinhani (em ../Instances/Frinhani) com VND
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt (Rodada 0)
+        --> Processando ../Instances/Frinhani/Random-600-600-18-8.txt (Rodada 0)
+DEBUG: FOLDER='Frinhani'
+==> Processando instâncias de: Frinhani (em ../Instances/Frinhani) com VND
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt (Rodada 0)
+        --> Processando ../Instances/Frinhani/Random-600-600-18-8.txt (Rodada 0)
+DEBUG: FOLDER='Frinhani'
+==> Processando instâncias de: Frinhani (em ../Instances/Frinhani) com VND
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt (Rodada 0)
+        --> Processando ../Instances/Frinhani/Random-600-600-18-8.txt (Rodada 0)
+DEBUG: FOLDER='Frinhani'
+==> Processando instâncias de: Frinhani (em ../Instances/Frinhani) com VND
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt (Rodada 0)
+        --> Processando ../Instances/Frinhani/Random-600-600-18-8.txt (Rodada 0)
+DEBUG: FOLDER='Frinhani'
+==> Processando instâncias de: Frinhani (em ../Instances/Frinhani) com VND
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt (Rodada 0)
+        --> Processando ../Instances/Frinhani/Random-600-600-18-8.txt (Rodada 0)
+DEBUG: FOLDER='Frinhani'
+==> Processando instâncias de: Frinhani (em ../Instances/Frinhani) com VND
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt (Rodada 0)
+        --> Processando ../Instances/Frinhani/Random-600-600-18-8.txt (Rodada 0)
+DEBUG: FOLDER='Frinhani'
+==> Processando instâncias de: Frinhani (em ../Instances/Frinhani) com VND
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani/Dataset_Description - Frinhani, Carvalho & Soma.txt (Rodada 0)
+        --> Processando ../Instances/Frinhani/Random-600-600-18-8.txt (Rodada 0)
+make: *** [Makefile:189: run-folder-vnd] Terminated
+make: *** [Makefile:189: run-folder-vnd] Terminated
+make: *** [Makefile:189: run-folder-vnd] Terminated
+make: *** [Makefile:189: run-folder-vnd] Terminated
+make: *** [Makefile:189: run-folder-vnd] Terminated
+make: *** [Makefile:189: run-folder-vnd] Terminated
+make: *** [Makefile:189: run-folder-vnd] Terminated
+make: *** [Makefile:189: run-folder-vnd] Terminated
+make: *** [Makefile:189: run-folder-vnd] Terminated
+make: *** [Makefile:189: run-folder-vnd] Terminated
+make: *** [Makefile:189: run-folder-vnd] Terminated
+DEBUG: FOLDER='Frinhani_All/part_1'
+==> Processando instâncias de: Frinhani_All/part_1 (em ../Instances/Frinhani_All/part_1) com VND
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani_All/part_1/Random-400-400-2-5.txt (Rodada 0)
+DEBUG: FOLDER='Frinhani_All/part_2'
+==> Processando instâncias de: Frinhani_All/part_2 (em ../Instances/Frinhani_All/part_2) com VND
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani_All/part_2/Random-400-400-2-7.txt (Rodada 0)
+DEBUG: FOLDER='Frinhani_All/part_3'
+==> Processando instâncias de: Frinhani_All/part_3 (em ../Instances/Frinhani_All/part_3) com VND
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani_All/part_3/Random-400-400-2-9.txt (Rodada 0)
+DEBUG: FOLDER='Frinhani_All/part_4'
+==> Processando instâncias de: Frinhani_All/part_4 (em ../Instances/Frinhani_All/part_4) com VND
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani_All/part_4/Random-400-400-2-4.txt (Rodada 0)
+DEBUG: FOLDER='Frinhani_All/part_5'
+==> Processando instâncias de: Frinhani_All/part_5 (em ../Instances/Frinhani_All/part_5) com VND
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani_All/part_5/Random-400-400-2-2.txt (Rodada 0)
+DEBUG: FOLDER='Frinhani_All/part_6'
+==> Processando instâncias de: Frinhani_All/part_6 (em ../Instances/Frinhani_All/part_6) com VND
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani_All/part_6/Random-400-400-6-5.txt (Rodada 0)
+DEBUG: FOLDER='Frinhani_All/part_7'
+==> Processando instâncias de: Frinhani_All/part_7 (em ../Instances/Frinhani_All/part_7) com VND
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani_All/part_7/Random-400-400-4-10.txt (Rodada 0)
+DEBUG: FOLDER='Frinhani_All/part_8'
+==> Processando instâncias de: Frinhani_All/part_8 (em ../Instances/Frinhani_All/part_8) com VND
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani_All/part_8/Random-400-400-2-10.txt (Rodada 0)
+DEBUG: FOLDER='Frinhani_All/part_9'
+==> Processando instâncias de: Frinhani_All/part_9 (em ../Instances/Frinhani_All/part_9) com VND
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani_All/part_9/Random-400-400-2-3.txt (Rodada 0)
+DEBUG: FOLDER='Frinhani_All/part_10'
+==> Processando instâncias de: Frinhani_All/part_10 (em ../Instances/Frinhani_All/part_10) com VND
+    ==> Iniciando Rodada Mestra 0 (executando todos os arquivos 1x)...
+        --> Processando ../Instances/Frinhani_All/part_10/Dataset_Description - Frinhani, Carvalho & Soma.txt (Rodada 0)
+        --> Processando ../Instances/Frinhani_All/part_10/Random-400-400-2-1.txt (Rodada 0)
