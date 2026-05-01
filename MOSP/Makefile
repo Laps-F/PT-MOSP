@@ -11,7 +11,7 @@ SRC_VND = VND/vnd.cpp
 # Flags de compilação
 CXX = g++ 
 CXXFLAGS = ../PTAPI-main/include/*.h ./MOSP.cpp ./MCNH/*.h -std=c++20 -Wshadow -Wall -g -O3 -Wno-unused-result -lpthread -march=native
-CXXFLAGS_BRKGA = -std=c++20 -Wshadow -Wall -g -O3 -Wno-unused-result -lpthread -march=native
+CXXFLAGS_BRKGA = -std=c++20 -fopenmp -Wshadow -Wall -g -O3 -Wno-unused-result -lpthread -march=native
 CXXFLAGS_VND = -I. -std=c++20 -Wshadow -Wall -g -O3 -Wno-unused-result -lpthread -march=native
 
 # Diretórios de instâncias

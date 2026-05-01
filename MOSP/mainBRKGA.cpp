@@ -48,7 +48,8 @@ int main(int argc, char* argv[]) {
     std::string outDir = "resultados";
     unsigned max_generations = 100;
     unsigned print_every = 1;
-    unsigned MAX_THREADS = thread::hardware_concurrency();
+    // unsigned MAX_THREADS = thread::hardware_concurrency();
+    unsigned MAX_THREADS = 12;
     bool verbose = true;
     double time_limit = 1080.0; // in seconds, 0 means no limit
 
