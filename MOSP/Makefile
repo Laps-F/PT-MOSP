@@ -200,7 +200,7 @@ run-folder-vnd: $(TARGET_VND)
 	fi; \
 	echo "==> Processando instâncias de: $$CREATOR_NAME (em $$INST_SUBDIR) com VND"; \
 	mkdir -p "$$RESULT_SUBDIR"; \
-	for i in $$(seq 0 4); do \
+	for i in $$(seq 5 9); do \
 		echo "    ==> Iniciando Rodada Mestra $$i (executando todos os arquivos 1x)..."; \
 		find "$$INST_SUBDIR" -name '*.txt' | sort -V | while read file; do \
 			echo "        --> Processando $$file (Rodada $$i)"; \

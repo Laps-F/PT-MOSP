@@ -1,0 +1,19 @@
+DATASET DESCRIPTION
+===================
+These datasets were created by Rafael M. D. Frinhani, Marco A. M. Carvalho and Nei Y. Soma, and corresponds to a set of 610 Minimization of Open Stacks Problem (MOSP) instances, randomly generated using the same generator proposed by Chu & Stuckey (2009). None of these instances have MOSP graph topology that leads to polynomial time solution (e.g., tree, 1-tree, k-regular or complete). The dimensions and quantity of pieces by patterns are described below:
+
+400 x 400 - 10 instances with 2, 4, 6, 8, 10, 14, 18, 20, 24, 28, 30 and 34 pieces by patterns, summing 120 instances.
+600 x 600 - 10 instances with 2, 4, 6, 8, 10, 14, 18, 20, 24, 28, 30, 38 and 40 pieces by patterns, summing 140 instances.
+800 x 800 - 10 instances with 2, 4, 6, 8, 10, 14, 18, 20, 24, 28, 30, 38, 40, 44, 48 and 50 pieces by patterns, summing 170 instances.
+1000 x 1000 - 10 instances with 2, 4, 6, 8, 10, 14, 18, 20, 24, 28, 30, 38, 40, 44, 48, 50 and 55 pieces by patterns, summing 180 instances.
+
+FILE FORMAT
+===========
+- The name of file "Random-m-n-pbp-i" identifies each instance, where m means the number of patterns, n stands for the number of pieces, pbp is the number of pieces by patterns and i is the instance number.
+- The first line contains two integers: m - the number of patterns (or products) and n - the number of pieces (or clients).
+- In the following lines, a binary matrix m x n is described.
+
+REFERENCE
+=========
+Chu, G. & Stuckey, P. J. Minimizing the maximum number of open stacks by customer search. In International Conference on Principles and Practice of Constraint Programming, 242–257 (Springer, 2009).
+

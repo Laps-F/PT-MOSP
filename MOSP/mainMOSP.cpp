@@ -20,9 +20,11 @@ int main(int argc, char* argv[])
 	int tempD = 2;
 	int uType = 3;
     int mType = 2;
-    int read = 0;
+    int read = 1;
     int sequence = 1;
-	int thN = thread::hardware_concurrency();	
+	// int thN = thread::hardware_concurrency();	
+	int thN = 12;	
+
     string outDir = "resultados";
 
 	// int thN = 11;
