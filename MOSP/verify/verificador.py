@@ -3,6 +3,7 @@ import os
 from pathlib import Path
 from typing import TextIO
 import re 
+from typing import Union, Tuple
 
 # --- Regex (copiado de converter_solucao.py) ---
 REGEX_TIPO_1_SPSHAW = re.compile(r'([a-zA-Z]+)(\d+)?\((\d+)\)_res\.txt')
@@ -10,7 +11,7 @@ REGEX_TIPO_2_RANDOM = re.compile(r'([a-zA-Z_]+)-(\d+)-(\d+)-(\d+)-(\d+)\((\d+)\)
 REGEX_TIPO_3_SCOOP = re.compile(r'scoop-(.+)_(.+)\((\d+)\)_res\.txt')
 REGEX_TIPO_4_FAGGIOLI = re.compile(r'(p\d{4})n(\d+)\((\d+)\)_res\.txt')
 
-def get_instance_basename(result_filename: str) -> str | None:
+def get_instance_basename(result_filename: str) -> Union[str, None]:
     """
     Com base no nome do arquivo de resultado, descobre o NOME BASE
     do arquivo de instância original.
@@ -149,8 +150,8 @@ class SolutionChecker:
     #         # --- CORREÇÃO APLICADA AQUI ---
     #             # Popula patternPieces (lendo LINHA por LINHA - Formato Padrões x Peças)
     #             val_idx = 0
-    #             for j in range(self.numberPatterns):
-    #                 for i in range(self.numberPieces):
+    #             for i in range(self.numberPieces):
+    #                 for j in range(self.numberPatterns):
     #                     if val_idx < len(matrix_values) and matrix_values[val_idx] == 1:
     #                         # Adiciona a peça 'i' à lista do padrão 'j'
     #                         self.patternPieces[j].append(i)
@@ -171,7 +172,7 @@ class SolutionChecker:
     #         print(f"Erro ao processar entrada {nome_arquivo}: {e}", file=sys.stderr)
     #         return False
        
-    def ler_solucao(self, nome_arquivo: str) -> tuple[bool, int]:
+    def ler_solucao(self, nome_arquivo: str) -> Tuple[bool, int]:
         """
         Lê o arquivo de solução.
         Equivalente a sua função lerSolucao.
@@ -330,8 +331,8 @@ def main():
             # --- MODO 2: LÓGICA DE LOTE ATUALIZADA ---
             elif len(sys.argv) == 1:
                 # Mantém os mesmos caminhos que você definiu
-                pasta_entrada = Path("../../Instances/Challenge")
-                pasta_solucao = Path("../Results2/Challenge/VND")
+                pasta_entrada = Path("../../Instances/Frinhani")
+                pasta_solucao = Path("../Results/Frinhani")
                 
                 if not pasta_entrada.is_dir():
                     print(f"Erro: Pasta de instâncias não encontrada: {pasta_entrada}", file=sys.stderr)

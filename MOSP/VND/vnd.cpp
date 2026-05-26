@@ -10,6 +10,9 @@
 #include <filesystem>
 #include "results.h"
 
+#include <queue>
+#include <deque>
+
 // Atalho para facilitar a passagem de tempo
 using TimePoint = std::chrono::time_point<std::chrono::high_resolution_clock>;
 
@@ -94,6 +97,139 @@ int EvaluateCost(const Solution& s, const Instance& inst) {
     }
 
     return max_open_stacks;
+}
+
+
+// ========================================================================
+// BUSCA EM LARGURA (BFS) PARA SOLUÇÃO INICIAL
+// ========================================================================
+
+// Retorna a lista de clientes (L_C) explorados pela BFS no grafo do MOSP
+std::vector<int> BreadthFirstSearchMOSP(const Instance& inst) {
+    std::vector<int> L_C;
+    std::vector<bool> explored(inst.num_customers, false);
+    std::vector<int> degree(inst.num_customers, 0);
+    std::vector<std::set<int>> adj(inst.num_customers);
+
+    // 1. Construir o Grafo MOSP
+    // Dois clientes têm uma aresta se demandam o mesmo produto (padrão)
+    for (int p = 0; p < inst.num_products; ++p) {
+        std::vector<int> customers_in_p;
+        for (int c = 0; c < inst.num_customers; ++c) {
+            if (inst.pattern_contains_piece[p][c]) {
+                customers_in_p.push_back(c);
+            }
+        }
+        for (size_t i = 0; i < customers_in_p.size(); ++i) {
+            for (size_t j = i + 1; j < customers_in_p.size(); ++j) {
+                adj[customers_in_p[i]].insert(customers_in_p[j]);
+                adj[customers_in_p[j]].insert(customers_in_p[i]);
+            }
+        }
+    }
+
+    // Calcula os graus de cada nó
+    for (int c = 0; c < inst.num_customers; ++c) {
+        degree[c] = adj[c].size();
+    }
+
+    // 2. Executar a BFS
+    // Como o grafo pode ter múltiplos componentes desconectados, iteramos para garantir que todos os nós sejam visitados [cite: 187, 188]
+    for (int iter = 0; iter < inst.num_customers; ++iter) {
+        int start_node = -1;
+        int min_deg = 999999;
+        
+        // Pega o nó não explorado com menor grau. Desempate pelo menor índice [cite: 186]
+        for (int c = 0; c < inst.num_customers; ++c) {
+            if (!explored[c] && degree[c] < min_deg) {
+                min_deg = degree[c];
+                start_node = c;
+            }
+        }
+
+        if (start_node == -1) break; // Todos os nós já foram explorados
+
+        std::queue<int> Q;
+        Q.push(start_node);
+        explored[start_node] = true;
+        L_C.push_back(start_node);
+
+        while (!Q.empty()) {
+            int t = Q.front();
+            Q.pop();
+
+            // Pega vizinhos inexplorados e ordena por grau crescente [cite: 195]
+            std::vector<int> neighbors;
+            for (int w : adj[t]) {
+                if (!explored[w]) {
+                    neighbors.push_back(w);
+                }
+            }
+            
+            std::sort(neighbors.begin(), neighbors.end(), [&](int a, int b) {
+                if (degree[a] != degree[b]) return degree[a] < degree[b];
+                return a < b; // Desempate lexicográfico [cite: 186]
+            });
+
+            for (int w : neighbors) {
+                explored[w] = true;
+                Q.push(w);
+                L_C.push_back(w);
+            }
+        }
+    }
+
+    return L_C; // Retorna a ordem de exploração dos nós [cite: 186]
+}
+
+// ========================================================================
+// SEQUENCIAMENTO DE PRODUTOS A PARTIR DA BFS
+// ========================================================================
+Solution GenerateInitialSolutionBFS(const Instance& inst) {
+    // 1. Obter L_C da BFS
+    std::vector<int> L_C = BreadthFirstSearchMOSP(inst);
+    
+    std::deque<int> L_P_deque; // Usando deque para inserções rápidas no início
+    std::vector<bool> sequenced(inst.num_products, false);
+
+    // 2. Transforma L_C em L_P varrendo do último para o primeiro nó [cite: 264]
+    for (int i = L_C.size() - 1; i >= 0; --i) {
+        int c = L_C[i];
+        
+        // Coleta os produtos encomendados pelo cliente c [cite: 266]
+        std::vector<int> p_c;
+        for (int p = 0; p < inst.num_products; ++p) {
+            if (inst.pattern_contains_piece[p][c]) {
+                p_c.push_back(p);
+            }
+        }
+        
+        // Ordena em ordem decrescente do número do produto [cite: 266]
+        std::sort(p_c.begin(), p_c.end(), std::greater<int>());
+
+        // Insere produtos que ainda não foram sequenciados no começo de L_P [cite: 268]
+        for (int p : p_c) {
+            if (!sequenced[p]) {
+                L_P_deque.push_front(p);
+                sequenced[p] = true;
+            }
+        }
+    }
+
+    // Tratamento de segurança: se algum produto não pertenceu a nenhum cliente (vazio), anexa ao final
+    for (int p = 0; p < inst.num_products; ++p) {
+        if (!sequenced[p]) {
+            L_P_deque.push_back(p);
+            sequenced[p] = true;
+        }
+    }
+
+    // 3. Empacota tudo na estrutura Solution
+    Solution initial_solution;
+    initial_solution.sequencia_de_padroes.assign(L_P_deque.begin(), L_P_deque.end());
+    initial_solution.cost = EvaluateCost(initial_solution, inst);
+
+    return initial_solution;
 }
 
 // ========================================================================
@@ -375,7 +511,7 @@ int main(int argc, char* argv[]) {
     int exec = 0;
     std::string outDir = "resultados";
     bool verbose = false;
-    double time_limit = 1080.0; // Padrão: 18 minutos
+    double time_limit = 1080; // Padrão: 18 minutos
 
     std::vector<std::string> arguments(argv + 1, argv + argc);
     std::string fn = arguments[0];
@@ -401,10 +537,16 @@ int main(int argc, char* argv[]) {
     }
 
     // Solução Inicial trivial (ordem 0, 1, 2... N-1)
-    Solution initial_solution;
-    initial_solution.sequencia_de_padroes.resize(inst.num_products);
-    std::iota(initial_solution.sequencia_de_padroes.begin(), initial_solution.sequencia_de_padroes.end(), 0);
-    initial_solution.cost = EvaluateCost(initial_solution, inst);
+    // Solution initial_solution;
+    // initial_solution.sequencia_de_padroes.resize(inst.num_products);
+    // std::iota(initial_solution.sequencia_de_padroes.begin(), initial_solution.sequencia_de_padroes.end(), 0);
+    // initial_solution.cost = EvaluateCost(initial_solution, inst);
+
+    Solution initial_solution = GenerateInitialSolutionBFS(inst);
+    
+    if(verbose) {
+        std::cout << "\n[!] Solucao Inicial (BFS) gerada com custo: " << initial_solution.cost << std::endl;
+    }
 
     // Executa o VND passando o tempo de início e o limite
     Solution best_solution = NSD(initial_solution, inst, verbose, start_time, time_limit);

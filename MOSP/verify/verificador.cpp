@@ -197,8 +197,8 @@ int main(int argc, char* argv[]) {
         string solucao = argv[2];
         verificarArquivo(entrada, solucao, outValidos, outInvalidos, true);
     } else {
-        string pastaEntrada = "../../Frinhani/Instances/";
-        string pastaSolucao = "../resultados-conjunto54";
+        string pastaEntrada = "../../Instances/Frinhani";
+        string pastaSolucao = "../Results/Frinhani";
 
         
         for (const auto& entrada : fs::directory_iterator(pastaEntrada)) {

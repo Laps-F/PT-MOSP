@@ -1,3 +1,1 @@
-GP1(0)_res.txt
-GP3(0)_res.txt
-GP2(0)_res.txt
+Random-400-400-2-1(2)_res.txt
