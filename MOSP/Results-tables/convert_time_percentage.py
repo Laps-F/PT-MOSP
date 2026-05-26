@@ -4,7 +4,7 @@ import re
 
 # ================= CONFIGURAÇÕES =================
 # 1. Coloque aqui o caminho da pasta onde estão os seus arquivos .txt
-pasta_arquivos = "/home/marco/mauro/PT-MOSP/MOSP/Results2/Frinhani/BRKGA"
+pasta_arquivos = "/home/mauro/TCC/MOSP/Results2/Frinhani/SND"
 
 # 2. O fator de conversão proporcional (20 min em ms / tempo base anterior)
 faktor = 1200000 / 1080169
