@@ -1,0 +1,13 @@
+Instancia,Modelo_Formulacao,Solver,Versao_Solver,Tempo_Limite_Seg,Tempo_Execucao_Seg,Status,Solucao_Corrente_Obj,Best_Bound,Gap_Percentual
+scoop-A_AP-9.d_3.txt,CP_Intervalos,OR-Tools (CP-SAT),9.12.4544,10.0,2.07,OPTIMAL,6,6,0.0
+GP1.txt,CP_Intervalos,OR-Tools (CP-SAT),9.12.4544,10.0,10.01,FEASIBLE,50,1,98.0
+GP1.txt_transposta,CP_Intervalos,OR-Tools (CP-SAT),9.12.4544,10.0,10.13,FEASIBLE,46,1,97.8261
+Random-400-400-2-1.txt_transposta,CP_Intervalos,OR-Tools (CP-SAT),9.12.4544,10.0,10.58,UNKNOWN,,0,
+Random-400-400-2-1.txt_transposta,CP_Intervalos,OR-Tools (CP-SAT),9.12.4544,30.0,30.07,FEASIBLE,238,2,99.1597
+Random-400-400-2-1.txt,CP_Intervalos,OR-Tools (CP-SAT),9.12.4544,30.0,30.06,UNKNOWN,,1,
+Random-400-400-2-1.txt,CP_Intervalos,OR-Tools (CP-SAT),9.12.4544,21600.0,21600.65,FEASIBLE,228,1,99.5614
+-------------------------------
+Random-400-400-2-1.txt_transposta,CP_Intervalos,OR-Tools (CP-SAT),9.12.4544,21600.0,21601.6,FEASIBLE,179,2,98.8827
+Random-600-600-2-1.txt_transposta,CP_Intervalos,OR-Tools (CP-SAT),9.12.4544,21600.0,21601.35,FEASIBLE,272,2,99.2647
+Random-800-800-2-1.txt_transposta,CP_Intervalos,OR-Tools (CP-SAT),9.12.4544,21600.0,21601.19,FEASIBLE,355,2,99.4366
+Random-1000-1000-2-1.txt_transposta,CP_Intervalos,OR-Tools (CP-SAT),9.12.4544,21600.0,21600.83,FEASIBLE,563,3,99.4671

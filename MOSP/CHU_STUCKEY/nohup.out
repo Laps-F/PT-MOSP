@@ -1,0 +1,64 @@
+--- Instancia: ../../Instances/Frinhani/Random-400-400-2-1.txt (Transposta) ---
+Tempo Limite: 21600.00s
+
+BACK (512) asmin = 86, tempo = 0.05s
+BACK (85) asmin = 78, tempo = 14.79s
+BACK (77) asmin = 77, tempo = 30.10s
+BACK (76) asmin = 76, tempo = 45.05s
+BACK (75) asmin = 75, tempo = 61.96s
+BACK (74) asmin = 74, tempo = 77.51s
+BACK (73) asmin = 73, tempo = 123.30s
+BACK (72) asmin = 72, tempo = 242.88s
+
+[TIMEOUT] Limite de tempo de 21600.00s excedido.
+--- Instancia: ../../Instances/Frinhani/Random-600-600-2-1.txt (Transposta) ---
+Tempo Limite: 21600.00s
+
+ERRO: Dimensoes excedem limites do solver.h! Aumente MAXCUSTOMERS e ARRAYPRODUCTS para pelo menos 600
+--- Instancia: ../../Instances/Frinhani/Random-600-600-2-1.txt (Transposta) ---
+Tempo Limite: 21600.00s
+
+BACK (1024) asmin = 115, tempo = 0.20s
+BACK (114) asmin = 114, tempo = 124.04s
+BACK (113) asmin = 113, tempo = 247.50s
+BACK (112) asmin = 110, tempo = 370.80s
+BACK (109) asmin = 106, tempo = 493.88s
+BACK (105) asmin = 105, tempo = 619.11s
+BACK (104) asmin = 104, tempo = 743.39s
+BACK (103) asmin = 103, tempo = 865.24s
+BACK (102) asmin = 102, tempo = 994.02s
+BACK (101) asmin = 101, tempo = 1129.57s
+BACK (100) asmin = 100, tempo = 1250.85s
+BACK (99) asmin = 99, tempo = 1488.77s
+
+[TIMEOUT] Limite de tempo de 21600.00s excedido.
+--- Instancia: ../../Instances/Frinhani/Random-800-800-2-1.txt (Transposta) ---
+Tempo Limite: 21600.00s
+
+BACK (1024) asmin = 145, tempo = 0.32s
+BACK (144) asmin = 143, tempo = 399.70s
+BACK (142) asmin = 142, tempo = 798.17s
+BACK (141) asmin = 141, tempo = 1198.95s
+BACK (140) asmin = 140, tempo = 1600.34s
+BACK (139) asmin = 139, tempo = 3250.90s
+BACK (138) asmin = 138, tempo = 3712.88s
+BACK (137) asmin = 137, tempo = 4138.64s
+BACK (136) asmin = 136, tempo = 5353.40s
+BACK (135) asmin = 135, tempo = 5925.64s
+
+[TIMEOUT] Limite de tempo de 21600.00s excedido.
+--- Instancia: ../../Instances/Frinhani/Random-1000-1000-2-1.txt (Transposta) ---
+Tempo Limite: 21600.00s
+
+BACK (1024) asmin = 208, tempo = 0.49s
+BACK (207) asmin = 205, tempo = 958.51s
+BACK (204) asmin = 203, tempo = 1925.17s
+BACK (202) asmin = 197, tempo = 2894.18s
+BACK (196) asmin = 196, tempo = 3873.74s
+BACK (195) asmin = 195, tempo = 4853.30s
+BACK (194) asmin = 191, tempo = 5831.95s
+BACK (190) asmin = 189, tempo = 6822.64s
+BACK (188) asmin = 188, tempo = 9799.00s
+BACK (187) asmin = 187, tempo = 11096.39s
+
+[TIMEOUT] Limite de tempo de 21600.00s excedido.

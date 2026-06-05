@@ -11,8 +11,8 @@ from pathlib import Path  # Importar Path
 # Frinhani (READ_FORM = ???, Leitura ?? x ?? - Verificar ler_matriz ?? )
 # SCOOP (READ_FORM = 0, Leitura peça x padrão - Verificar ler_matriz 1)
 
-PASTA_INSTANCIAS = "../../Instances/"
-PASTA_SOLUCOES = "Results2/Frinhani_jafeito"
+PASTA_INSTANCIAS = "."
+PASTA_SOLUCOES = "."
 READ_FORM = 1
 
 # --- Fim das Configurações ---

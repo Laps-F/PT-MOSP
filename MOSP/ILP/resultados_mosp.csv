@@ -1,0 +1,4 @@
+Instancia,Modelo_Formulacao,Solver,Versao_Solver,Tempo_Limite_Seg,Tempo_Execucao_Seg,Status,Solucao_Corrente_Obj,Best_Bound,Gap_Percentual
+Random-400-400-2-1.txt,ILP_Grafos_Intervalo,MIP/CBC,N/A,30.0,0.0,UNKNOWN,,,
+Random-400-400-2-1.txt,ILP_Grafos_Intervalo,MIP/CBC,N/A,30.0,0.0,UNKNOWN,,,
+Random-400-400-2-1.txt,ILP_Grafos_Intervalo,MIP/CBC,N/A,21600.0,21871.81,CRASHED_SIGSEGV,,,

@@ -528,8 +528,8 @@ int main(int argc, char* argv[]) {
             time_limit = std::stod(arguments[i + 1]);
     }
 
-    std::filesystem::create_directories(outDir + "/VND");
-    outDir += "/VND";
+    std::filesystem::create_directories(outDir + "/SND");
+    outDir += "/SND";
 
     Instance inst;
     if (!ReadInstanceFromFile(fn, inst)) {

@@ -1,0 +1,7 @@
+Benchmark,Instâncias,Wins,Ties,Losses,p_valor_ajustado,Teste
+Carvalho_Soma,150,1,87,62,1.1586380570240325e-13,Wilcoxon
+Challenge,46,0,43,3,0.3074113045792481,Wilcoxon
+Chu_Stuckey,200,0,188,12,0.002128022020556997,Wilcoxon
+Faggioli,300,0,298,2,0.31459841410057005,Wilcoxon
+GLOBAL (Todos),720,1,640,79,5.73089710022256e-17,Wilcoxon
+SCOOP,24,0,24,0,1.0,N/A (100% Empates)

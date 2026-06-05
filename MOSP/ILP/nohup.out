@@ -1,0 +1,382 @@
+Iniciando montagem do modelo...
+Modelo montado. Iniciando otimização...
+Welcome to the CBC MILP Solver 
+Version: Trunk
+Build Date: Oct 24 2021 
+
+Starting solution of the Linear programming relaxation problem using Primal Simplex
+
+Coin0506I Presolve 83798646 (-42427000) rows, 236755 (-79800) columns and 250521174 (-127201200) elements
+Clp0030I 0 infeas 80200, obj 0 - mu 0.001, its 0, 0 interior
+Clp0030I 1 infeas 222454.77, obj 78.909038 - mu 0.001, its 2, 233098 interior
+Clp0030I 2 infeas 163508.21, obj 156.2599 - mu 0.001, its 105, 222436 interior
+Clp0030I 3 infeas 57592.42, obj 168.44229 - mu 0.001, its 105, 229216 interior
+Clp0030I 4 infeas 269.57317, obj 168.68709 - mu 0.0003333, its 105, 232707 interior
+Clp0030I 5 infeas 71.585282, obj 168.87581 - mu 0.0003333, its 105, 234090 interior
+Clp0030I 6 infeas 98.933403, obj 169.00416 - mu 0.0003333, its 105, 234079 interior
+Clp0030I 7 infeas 0.32702395, obj 169.00437 - mu 0.00011108889, its 105, 234079 interior
+Clp0030I 8 infeas 0.27452317, obj 169.00446 - mu 0.00011108889, its 105, 234079 interior
+Clp0030I 9 infeas 0.038047695, obj 169.00436 - mu 0.00011108889, its 105, 234079 interior
+Clp0030I 10 infeas 0.0056984786, obj 169.00433 - mu 3.7025927e-05, its 105, 234079 interior
+Clp0030I 11 infeas 0.011949785, obj 169.00429 - mu 3.7025927e-05, its 105, 234079 interior
+Clp0030I 12 infeas 0.0091818348, obj 169.00427 - mu 3.7025927e-05, its 105, 234079 interior
+Clp0030I 13 infeas 0.0028315935, obj 169.00426 - mu 1.2340741e-05, its 105, 234079 interior
+Clp0030I 14 infeas 0.0027475798, obj 169.00425 - mu 1.2340741e-05, its 105, 234079 interior
+Clp0030I 15 infeas 0.0049674052, obj 169.00424 - mu 1.2340741e-05, its 105, 234079 interior
+Clp0030I 16 infeas 0.0014122229, obj 169.00423 - mu 4.1131691e-06, its 105, 234079 interior
+Clp0030I 17 infeas 0.0012010588, obj 169.00423 - mu 4.1131691e-06, its 105, 234079 interior
+Clp0030I 18 infeas 0.0013955931, obj 169.00423 - mu 4.1131691e-06, its 105, 234079 interior
+Clp0030I 19 infeas 0.00026155768, obj 169.00423 - mu 1.3709193e-06, its 105, 234079 interior
+Clp0030I 20 infeas 0.00031821615, obj 169.00423 - mu 1.3709193e-06, its 105, 234079 interior
+Clp0030I 21 infeas 0.0002585028, obj 169.00423 - mu 1.3709193e-06, its 105, 234079 interior
+Clp0030I 22 infeas 0.00016721454, obj 169.00423 - mu 4.5692739e-07, its 105, 234079 interior
+Clp0030I 23 infeas 0.00014722918, obj 169.00422 - mu 4.5692739e-07, its 105, 234079 interior
+Clp0030I 24 infeas 6.4734582e-05, obj 169.00422 - mu 4.5692739e-07, its 105, 234079 interior
+Clp0030I 25 infeas 2.2236777e-05, obj 169.00422 - mu 1.522939e-07, its 105, 234079 interior
+Clp0030I 26 infeas 5.2684341e-05, obj 169.00422 - mu 1.522939e-07, its 105, 234079 interior
+Clp0030I 27 infeas 4.8856656e-05, obj 169.00422 - mu 1.522939e-07, its 105, 234079 interior
+Clp0030I 28 infeas 1.1847816e-05, obj 169.00422 - mu 5.0759557e-08, its 105, 234079 interior
+Clp0030I 29 infeas 9.3506128e-06, obj 169.00422 - mu 5.0759557e-08, its 105, 234079 interior
+Clp0030I 30 infeas 1.7899334e-05, obj 169.00422 - mu 5.0759557e-08, its 105, 234079 interior
+Clp1000I sum of infeasibilities 0 - average 0, 2676 fixed columns
+Coin0506I Presolve 82730922 (-1067724) rows, 234079 (-2676) columns and 246502140 (-4019034) elements
+Clp0006I 0  Obj 169.00422 Dual inf 99.999999 (1)
+Clp0006I 1001  Obj 168.74056 Dual inf 78900.999 (789)
+Clp0006I 2001  Obj 168.53475 Dual inf 78603.999 (786)
+Clp0006I 3001  Obj 168.29507 Dual inf 79507.999 (796)
+Clp0006I 4001  Obj 168.25003 Dual inf 79108.999 (791)
+Clp0006I 5001  Obj 168.04269 Dual inf 79211.999 (791)
+Clp0006I 6001  Obj 167.95718 Dual inf 79112.999 (790)
+Clp0006I 7001  Obj 167.62741 Dual inf 79214.999 (793)
+Clp0006I 8001  Obj 167.55727 Dual inf 78714.999 (786)
+Clp0006I 9001  Obj 167.40963 Dual inf 80020.999 (790)
+Clp0006I 10001  Obj 167.32209 Dual inf 79119.999 (789)
+Clp0006I 11001  Obj 167.14439 Dual inf 81134.999 (809)
+Clp0006I 12001  Obj 167.10086 Dual inf 81336.999 (811)
+Clp0006I 13001  Obj 166.86971 Dual inf 81843.999 (818)
+Clp0006I 14001  Obj 166.74292 Dual inf 82247.999 (820)
+Clp0006I 15001  Obj 166.4845 Dual inf 82652.999 (823)
+Clp0006I 16001  Obj 166.34713 Dual inf 82650.999 (817)
+Clp0006I 17001  Obj 166.08672 Dual inf 83159.999 (828)
+Clp0006I 18001  Obj 165.99762 Dual inf 81546.999 (812)
+Clp0006I 19001  Obj 165.85702 Dual inf 84168.999 (835)
+Clp0006I 20001  Obj 165.78893 Dual inf 84469.999 (828)
+Clp0006I 21001  Obj 165.53067 Dual inf 85790.999 (859)
+Clp0006I 21002  Obj 165.53067 Dual inf 85790.999 (859)
+Clp0006I 22002  Obj 165.44247 Dual inf 83163.999 (826)
+Clp0006I 23002  Obj 165.37561 Dual inf 87084.999 (820)
+Clp0006I 24002  Obj 165.27133 Dual inf 84186.999 (819)
+Clp0006I 25002  Obj 165.18028 Dual inf 142403 (1239)
+Clp0006I 26002  Obj 165.17565 Dual inf 143413 (1252)
+Clp0006I 27002  Obj 165.16382 Dual inf 144225 (1270)
+Clp0006I 28002  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 29002  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30002  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30003  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30004  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30005  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30006  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30007  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30008  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30009  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30010  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30011  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30012  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30013  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30014  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30015  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30016  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30017  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30018  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30019  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30020  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30021  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30022  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30023  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30024  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30025  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30026  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30027  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30028  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30029  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30030  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30031  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30032  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30033  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30034  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30035  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30036  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30037  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30038  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30039  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30040  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30041  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30042  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30043  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30044  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30045  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30046  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30047  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30048  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30049  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30050  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30051  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30052  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30053  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30054  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30055  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30056  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30057  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30058  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30059  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30060  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30061  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30062  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30063  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30064  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30065  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30066  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30067  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30068  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30069  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30070  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30071  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30072  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30073  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30074  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30075  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30076  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30077  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30078  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30079  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30080  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30081  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30082  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30083  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30084  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30085  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30086  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30087  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30088  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30089  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30090  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30091  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30092  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30093  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30094  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30095  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30096  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30097  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30098  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30099  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30100  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30101  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30102  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30103  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30104  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30105  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30106  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30107  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30108  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30109  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30110  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30111  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30112  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30113  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30114  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30115  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30116  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30117  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30118  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30119  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30120  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30121  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30122  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30123  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30124  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30125  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30126  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30127  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30128  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30129  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30130  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30131  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30132  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30133  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30134  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30135  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30136  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30137  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30138  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30139  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30140  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30141  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30142  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30143  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30144  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30145  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30146  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30147  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30148  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30149  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30150  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30151  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30152  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30153  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30154  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30155  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30156  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30157  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30158  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30159  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30160  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30161  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30162  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30163  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30164  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30165  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30166  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30167  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30168  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30169  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30170  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30171  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30172  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30173  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30174  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30175  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30176  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30177  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30178  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30179  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30180  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30181  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30182  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30183  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30184  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30185  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30186  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30187  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30188  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30189  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30190  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30191  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30192  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30193  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30194  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30195  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30196  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30197  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30198  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30199  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30200  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30201  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30202  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30203  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30204  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30205  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30206  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30207  Obj 165.16185 Dual inf 147051 (1297)
+Clp0006I 30208  Obj 165.16185 Dual inf 147051 (1297)
+Clp0003I Stopped - objective value 165.16185
+Clp0006I 0  Obj 165.16185 Dual inf 147051 (1297)
+Clp0003I Stopped - objective value 165.16185
+Coin0505I Presolved problem not optimal, resolve after postsolve
+Coin0511I After Postsolve, objective 165.16185, infeasibilities - dual 2312.9999 (1297), primal 0 (0)
+Clp0006I 0  Obj 165.16185 Dual inf 147051 (1297)
+Clp0003I Stopped - objective value 165.16185
+Clp0006I 0  Obj 165.16185 Dual inf 147051 (1297)
+Clp0003I Stopped - objective value 165.16185
+Clp0006I 0  Obj 165.16185 Dual inf 147051 (1297)
+Clp0003I Stopped - objective value 165.16185
+Coin0505I Presolved problem not optimal, resolve after postsolve
+Coin0511I After Postsolve, objective 165.16185, infeasibilities - dual 2312.9999 (1297), primal 0 (0)
+Clp0032I Stopped objective 165.1618515 - 0 iterations time 21871.812, Presolve 595.81, Idiot 21222.51
+
+Starting MIP optimization
+
+
+ERROR while running Cbc. Signal SIGSEGV caught. Getting stack trace.
+/home/marco/.localpython/lib/python3.8/site-packages/mip/libraries/cbc-c-linux-x86-64.so(_Z15CbcCrashHandleri+0x119) [0x7fefe2c1c459]
+/lib64/libc.so.6(+0x37870) [0x7ff0539eb870]
+/home/marco/.localpython/lib/python3.8/site-packages/mip/libraries/cbc-c-linux-x86-64.so(_ZN16ClpFactorization9factorizeEP10ClpSimplexib+0x1527) [0x7fefe2e97917]
+/home/marco/.localpython/lib/python3.8/site-packages/mip/libraries/cbc-c-linux-x86-64.so(_ZN10ClpSimplex17internalFactorizeEi+0x66e) [0x7fefe2f0891e]
+/home/marco/.localpython/lib/python3.8/site-packages/mip/libraries/cbc-c-linux-x86-64.so(_ZN10ClpSimplex7startupEii+0x19b) [0x7fefe2f2a6fb]
+/home/marco/.localpython/lib/python3.8/site-packages/mip/libraries/cbc-c-linux-x86-64.so(_ZN16ClpSimplexPrimal6primalEii+0x97) [0x7fefe2f89e77]
+/home/marco/.localpython/lib/python3.8/site-packages/mip/libraries/cbc-c-linux-x86-64.so(_ZN10ClpSimplex6primalEii+0xaa) [0x7fefe2f2b7aa]
+/home/marco/.localpython/lib/python3.8/site-packages/mip/libraries/cbc-c-linux-x86-64.so(_ZN21OsiClpSolverInterface12initialSolveEv+0x144c) [0x7fefe2e81c0c]
+/home/marco/.localpython/lib/python3.8/site-packages/mip/libraries/cbc-c-linux-x86-64.so(_ZN8CbcModel12initialSolveEv+0x61) [0x7fefe2d1a991]
+/home/marco/.localpython/lib/python3.8/site-packages/mip/libraries/cbc-c-linux-x86-64.so(_Z8CbcMain1iPPKcR8CbcModelPFiPS2_iER19CbcSolverUsefulData+0x94a7) [0x7fefe2c32367]
+/home/marco/.localpython/lib/python3.8/site-packages/mip/libraries/cbc-c-linux-x86-64.so(Cbc_solve+0x13a7) [0x7fefe2c16887]
+/home/marco/.localpython/lib/python3.8/site-packages/_cffi_backend.cpython-38-x86_64-linux-gnu.so(+0x24052) [0x7ff04cc7c052]
+/home/marco/.localpython/lib/python3.8/site-packages/_cffi_backend.cpython-38-x86_64-linux-gnu.so(+0x2314c) [0x7ff04cc7b14c]
+/home/marco/.localpython/lib/python3.8/site-packages/_cffi_backend.cpython-38-x86_64-linux-gnu.so(+0x2103f) [0x7ff04cc7903f]
+python3(_PyObject_MakeTpCall+0x77) [0x4c10e7]
+python3(_PyEval_EvalFrameDefault+0x495b) [0x51fe5b]
+python3(_PyEval_EvalCodeWithName+0x8ae) [0x51aeae]
+python3(_PyFunction_Vectorcall+0x186) [0x4c1a96]
+python3(_PyEval_EvalFrameDefault+0x6a9) [0x51bba9]
+python3(_PyEval_EvalCodeWithName+0x2fd) [0x51a8fd]
+python3(_PyFunction_Vectorcall+0x186) [0x4c1a96]
+python3() [0x55a3c5]
+python3(_PyEval_EvalFrameDefault+0xfd5) [0x51c4d5]
+python3(_PyEval_EvalCodeWithName+0x8ae) [0x51aeae]
+python3(_PyFunction_Vectorcall+0x186) [0x4c1a96]
+python3(_PyEval_EvalFrameDefault+0xfd5) [0x51c4d5]
+python3(_PyEval_EvalCodeWithName+0x2fd) [0x51a8fd]
+python3(PyEval_EvalCode+0x23) [0x58d183]
+python3() [0x59bca1]
+python3() [0x59bc3f]
+python3() [0x46b109]
+python3(PyRun_SimpleFileExFlags+0x34d) [0x46a641]
+python3(Py_RunMain+0x4f6) [0x56bb76]
+python3(Py_BytesMain+0x29) [0x56b599]
+/lib64/libc.so.6(__libc_start_main+0xea) [0x7ff0539d709a]
+python3(_start+0x2a) [0x56b4ba]
+
+
+
+
+ERROR while running Cbc. Signal SIGABRT caught. Getting stack trace.
+/home/marco/.localpython/lib/python3.8/site-packages/mip/libraries/cbc-c-linux-x86-64.so(_Z15CbcCrashHandleri+0x119) [0x7fefe2c1c459]
+/lib64/libc.so.6(+0x37870) [0x7ff0539eb870]
+/lib64/libc.so.6(gsignal+0x100) [0x7ff0539eb800]
+/lib64/libc.so.6(abort+0x113) [0x7ff0539d5907]
+/home/marco/.localpython/lib/python3.8/site-packages/mip/libraries/cbc-c-linux-x86-64.so(+0x1772d2) [0x7fefe2bd02d2]
+/lib64/libc.so.6(+0x37870) [0x7ff0539eb870]
+/home/marco/.localpython/lib/python3.8/site-packages/mip/libraries/cbc-c-linux-x86-64.so(_ZN16ClpFactorization9factorizeEP10ClpSimplexib+0x1527) [0x7fefe2e97917]
+/home/marco/.localpython/lib/python3.8/site-packages/mip/libraries/cbc-c-linux-x86-64.so(_ZN10ClpSimplex17internalFactorizeEi+0x66e) [0x7fefe2f0891e]
+/home/marco/.localpython/lib/python3.8/site-packages/mip/libraries/cbc-c-linux-x86-64.so(_ZN10ClpSimplex7startupEii+0x19b) [0x7fefe2f2a6fb]
+/home/marco/.localpython/lib/python3.8/site-packages/mip/libraries/cbc-c-linux-x86-64.so(_ZN16ClpSimplexPrimal6primalEii+0x97) [0x7fefe2f89e77]
+/home/marco/.localpython/lib/python3.8/site-packages/mip/libraries/cbc-c-linux-x86-64.so(_ZN10ClpSimplex6primalEii+0xaa) [0x7fefe2f2b7aa]
+/home/marco/.localpython/lib/python3.8/site-packages/mip/libraries/cbc-c-linux-x86-64.so(_ZN21OsiClpSolverInterface12initialSolveEv+0x144c) [0x7fefe2e81c0c]
+/home/marco/.localpython/lib/python3.8/site-packages/mip/libraries/cbc-c-linux-x86-64.so(_ZN8CbcModel12initialSolveEv+0x61) [0x7fefe2d1a991]
+/home/marco/.localpython/lib/python3.8/site-packages/mip/libraries/cbc-c-linux-x86-64.so(_Z8CbcMain1iPPKcR8CbcModelPFiPS2_iER19CbcSolverUsefulData+0x94a7) [0x7fefe2c32367]
+/home/marco/.localpython/lib/python3.8/site-packages/mip/libraries/cbc-c-linux-x86-64.so(Cbc_solve+0x13a7) [0x7fefe2c16887]
+/home/marco/.localpython/lib/python3.8/site-packages/_cffi_backend.cpython-38-x86_64-linux-gnu.so(+0x24052) [0x7ff04cc7c052]
+/home/marco/.localpython/lib/python3.8/site-packages/_cffi_backend.cpython-38-x86_64-linux-gnu.so(+0x2314c) [0x7ff04cc7b14c]
+/home/marco/.localpython/lib/python3.8/site-packages/_cffi_backend.cpython-38-x86_64-linux-gnu.so(+0x2103f) [0x7ff04cc7903f]
+python3(_PyObject_MakeTpCall+0x77) [0x4c10e7]
+python3(_PyEval_EvalFrameDefault+0x495b) [0x51fe5b]
+python3(_PyEval_EvalCodeWithName+0x8ae) [0x51aeae]
+python3(_PyFunction_Vectorcall+0x186) [0x4c1a96]
+python3(_PyEval_EvalFrameDefault+0x6a9) [0x51bba9]
+python3(_PyEval_EvalCodeWithName+0x2fd) [0x51a8fd]
+python3(_PyFunction_Vectorcall+0x186) [0x4c1a96]
+python3() [0x55a3c5]
+python3(_PyEval_EvalFrameDefault+0xfd5) [0x51c4d5]
+python3(_PyEval_EvalCodeWithName+0x8ae) [0x51aeae]
+python3(_PyFunction_Vectorcall+0x186) [0x4c1a96]
+python3(_PyEval_EvalFrameDefault+0xfd5) [0x51c4d5]
+python3(_PyEval_EvalCodeWithName+0x2fd) [0x51a8fd]
+python3(PyEval_EvalCode+0x23) [0x58d183]
+python3() [0x59bca1]
+python3() [0x59bc3f]
+python3() [0x46b109]
+python3(PyRun_SimpleFileExFlags+0x34d) [0x46a641]
+python3(Py_RunMain+0x4f6) [0x56bb76]
+python3(Py_BytesMain+0x29) [0x56b599]
+/lib64/libc.so.6(__libc_start_main+0xea) [0x7ff0539d709a]
+python3(_start+0x2a) [0x56b4ba]
+
+
